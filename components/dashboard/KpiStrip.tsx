@@ -13,7 +13,7 @@ import {
 
 import type { CalculatorResult } from "@/lib/types";
 
-type Props = { result: CalculatorResult };
+type Props = { result: CalculatorResult; className?: string };
 
 type Tint = "orange" | "green" | "blue" | "purple" | "teal" | "indigo";
 
@@ -27,7 +27,7 @@ type KpiCardProps = {
   tint: Tint;
 };
 
-export function KpiStrip({ result }: Props) {
+export function KpiStrip({ result, className }: Props) {
   const { kpis } = result;
 
   const cards: KpiCardProps[] = [
@@ -124,7 +124,7 @@ export function KpiStrip({ result }: Props) {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+    <div className={className ?? "grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6"}>
       {cards.map((c, i) => (
         <motion.div
           key={c.label}

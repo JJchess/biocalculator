@@ -19,62 +19,54 @@ export function AppBar({ result }: Props) {
   const copyLatex = async () => {
     try {
       await navigator.clipboard.writeText(equationKatex);
-      toast.success("LaTeX 已复制", {
-        description: "可直接粘贴到 Markdown / LaTeX 文档",
-      });
+      toast.success("LaTeX 已复制");
     } catch {
       toast.error("复制失败");
     }
   };
 
   return (
-    <header className="sticky top-0 z-30 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8 pt-3">
-      <div className="surface-card flex items-center gap-3 px-4 py-2.5 md:px-5">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--apple-blue)] to-[var(--apple-purple)] text-white shadow-[var(--shadow-glow-blue)]">
-            <Atom className="h-5 w-5" strokeWidth={2.2} />
+    <header className="sticky top-3 z-30">
+      <div className="surface-card flex h-12 items-center gap-2.5 px-3.5">
+        {/* Brand */}
+        <div className="flex shrink-0 items-center gap-2">
+          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--apple-blue)] to-[var(--apple-purple)] text-white shadow-[var(--shadow-glow-blue)]">
+            <Atom className="h-4 w-4" strokeWidth={2.4} />
           </div>
-          <div className="leading-tight">
-            <div className="text-[15px] font-semibold tracking-tight">BioCalc</div>
-            <div className="text-quaternary text-[11px]">
-              生物处理质量衡算
-            </div>
-          </div>
+          <span className="text-[14px] font-semibold tracking-tight">BioCalc</span>
+          <span className="text-quaternary hidden text-[11.5px] md:inline">
+            · 生物处理质量衡算
+          </span>
         </div>
 
-        <div className="mx-1 hidden h-7 w-px bg-[var(--hairline)] md:block" />
+        <span className="mx-1 hidden h-5 w-px bg-[var(--hairline)] md:block" />
 
+        {/* Reaction chain */}
         <div className="hidden min-w-0 flex-1 items-center gap-1.5 overflow-x-auto md:flex">
-          <Chip icon={<FlaskConical className="h-3.5 w-3.5" />} tint="blue">
+          <Chip icon={<FlaskConical className="h-3 w-3" />} tint="blue">
             {donorName}
           </Chip>
-          <ArrowRight className="text-quaternary h-3.5 w-3.5 shrink-0" />
-          <Chip icon={<Sparkles className="h-3.5 w-3.5" />} tint="orange">
+          <ArrowRight className="text-quaternary h-3 w-3 shrink-0" />
+          <Chip icon={<Sparkles className="h-3 w-3" />} tint="orange">
             {acceptorName}
           </Chip>
-          <ArrowRight className="text-quaternary h-3.5 w-3.5 shrink-0" />
+          <ArrowRight className="text-quaternary h-3 w-3 shrink-0" />
           <Chip tint="purple">
-            <span>
-              f<sub>s</sub> = {kpis.fs.toFixed(2)}
-            </span>
+            f<sub>s</sub>={kpis.fs.toFixed(2)}
           </Chip>
           <Chip tint="neutral">
-            <span>
-              n<sub>e</sub> = {kpis.electronsPerSubstrateMolecule}
-            </span>
+            n<sub>e</sub>={kpis.electronsPerSubstrateMolecule}
           </Chip>
         </div>
 
-        <div className="ml-auto flex items-center gap-2">
-          <button
-            type="button"
-            onClick={copyLatex}
-            className="text-secondary hover:bg-[var(--secondary)] inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-medium transition active:scale-[0.97]"
-          >
-            <Copy className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">复制 LaTeX</span>
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={copyLatex}
+          className="text-secondary ml-auto inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-medium transition hover:bg-[var(--secondary)] active:scale-[0.97]"
+        >
+          <Copy className="h-3.5 w-3.5" />
+          <span className="hidden sm:inline">复制 LaTeX</span>
+        </button>
       </div>
     </header>
   );
@@ -100,7 +92,7 @@ function Chip({
   };
   return (
     <span
-      className={`tabular inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-[11.5px] font-medium ${styles[tint]}`}
+      className={`tabular inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium ${styles[tint]}`}
     >
       {icon}
       <span className="whitespace-nowrap">{children}</span>

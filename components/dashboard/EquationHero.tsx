@@ -20,8 +20,8 @@ export function EquationHero({ result }: Props) {
   };
 
   return (
-    <div className="surface-card relative overflow-hidden p-5">
-      <div className="mb-3 flex items-center justify-between gap-2">
+    <div className="surface-card relative overflow-hidden p-4">
+      <div className="mb-2 flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[rgba(0,122,255,0.10)] text-[var(--apple-blue)] dark:bg-[rgba(10,132,255,0.16)] dark:text-[var(--apple-teal)]">
             <Sigma className="h-4 w-4" />
@@ -47,7 +47,7 @@ export function EquationHero({ result }: Props) {
         initial={{ opacity: 0.4, y: 4 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="overflow-x-auto rounded-xl bg-[rgba(0,0,0,0.025)] py-4 px-2 text-center text-[15px] sm:text-[17px] md:text-[18px] dark:bg-[rgba(255,255,255,0.04)]"
+        className="overflow-x-auto rounded-xl bg-[rgba(0,0,0,0.025)] py-3 px-2 text-center text-[15px] sm:text-[17px] md:text-[18px] dark:bg-[rgba(255,255,255,0.04)]"
       >
         <BlockMath math={result.equationKatex} />
       </motion.div>

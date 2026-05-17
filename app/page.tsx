@@ -25,45 +25,47 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <div className="mx-auto flex max-w-[1480px] flex-col gap-5 px-4 pb-12 md:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1480px] px-4 pt-3 pb-10 md:px-6 lg:px-8">
         <AppBar result={result} />
 
-        {/* 大标题区 */}
-        <section className="mt-4 flex flex-col gap-1.5">
-          <h1 className="text-[28px] font-semibold tracking-tight md:text-[34px]">
-            复杂污染物生物处理 · 质量衡算
-          </h1>
-          <p className="text-tertiary max-w-2xl text-[13.5px] leading-relaxed">
-            基于 Rittmann–McCarty 半反应法。元素与电荷自动配平、电子分配可视化、
-            归一化至 1 mol 电子供体。
-          </p>
-        </section>
+        {/* Workspace: 左侧粘连控制台 + 右侧 bento 内容 */}
+        <main className="mt-4 grid min-w-0 items-start gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
+          {/* 左侧：粘连的控制台 */}
+          <div className="lg:sticky lg:top-20">
+            <ControlPanelV2
+              donorId={donorId}
+              acceptorId={acceptorId}
+              fs={fs}
+              onDonorChange={setDonorId}
+              onAcceptorChange={setAcceptorId}
+              onFsChange={setFs}
+            />
+          </div>
 
-        {/* KPI strip */}
-        <KpiStrip result={result} />
-
-        {/* 主区：左控制台 / 右内容 */}
-        <div className="grid min-w-0 items-start gap-5 lg:grid-cols-[minmax(280px,320px)_minmax(0,1fr)]">
-          <ControlPanelV2
-            donorId={donorId}
-            acceptorId={acceptorId}
-            fs={fs}
-            onDonorChange={setDonorId}
-            onAcceptorChange={setAcceptorId}
-            onFsChange={setFs}
-          />
-
-          <div className="flex min-w-0 flex-col gap-5">
+          {/* 右侧：bento 分块 */}
+          <section className="flex min-w-0 flex-col gap-4">
+            {/* 第一区：方程总览（全宽 hero） */}
             <EquationHero result={result} />
-            <SankeyChart result={result} />
-            <div className="grid min-w-0 gap-5 xl:grid-cols-2">
+
+            {/* 第二区：电子流 Sankey + KPI 网格并列 */}
+            <div className="grid min-w-0 gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+              <SankeyChart result={result} />
+              <KpiStrip
+                result={result}
+                className="grid h-full grid-cols-2 gap-3 [&>*]:min-h-[130px]"
+              />
+            </div>
+
+            {/* 第三区：质量衡算 + 产物条 (60/40) */}
+            <div className="grid min-w-0 gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
               <MassBalanceTableV2 rows={result.massBalanceRows} />
               <ProductBarChartV2 data={result.productBarData} />
             </div>
-          </div>
-        </div>
 
-        <HalfReactionReference />
+            {/* 第四区：折叠参考表 */}
+            <HalfReactionReference />
+          </section>
+        </main>
       </div>
     </div>
   );

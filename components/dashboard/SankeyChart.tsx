@@ -29,7 +29,7 @@ export function SankeyChart({ result }: Props) {
   };
 
   return (
-    <div className="surface-card relative flex h-[440px] flex-col overflow-hidden p-5 md:h-[480px]">
+    <div className="surface-card relative flex h-full min-h-[420px] flex-col overflow-hidden p-4">
       <div className="mb-1 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[rgba(0,122,255,0.10)] text-[var(--apple-blue)] dark:bg-[rgba(10,132,255,0.16)] dark:text-[var(--apple-teal)]">
