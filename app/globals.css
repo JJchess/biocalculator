@@ -1,26 +1,271 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─────────────────────────────────────────────────────────────────
+ * Apple-HIG inspired design tokens
+ * 浅色为主，参照 apple.com / macOS Sonoma 系统色板
+ * ────────────────────────────────────────────────────────────── */
+@theme inline {
+  --color-background: var(--app-bg);
+  --color-foreground: var(--app-fg);
+  --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  --font-mono: var(--font-mono), "SF Mono", ui-monospace, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  --font-heading: var(--font-sans);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* App canvas — 苹果风冷调灰白 */
+  --app-bg: #f5f5f7;
+  --app-fg: #1d1d1f;
+
+  /* Material surfaces */
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-solid: #ffffff;
+  --surface-elevated: rgba(255, 255, 255, 0.92);
+  --hairline: rgba(0, 0, 0, 0.08);
+  --hairline-strong: rgba(0, 0, 0, 0.14);
+
+  /* Apple system colors (light) */
+  --apple-blue: #007aff;
+  --apple-blue-2: #0a84ff;
+  --apple-teal: #30b0c7;
+  --apple-green: #34c759;
+  --apple-orange: #ff9500;
+  --apple-red: #ff3b30;
+  --apple-purple: #af52de;
+  --apple-pink: #ff2d55;
+  --apple-yellow: #ffcc00;
+  --apple-indigo: #5856d6;
+
+  /* Semantic text */
+  --text-primary: #1d1d1f;
+  --text-secondary: #424245;
+  --text-tertiary: #6e6e73;
+  --text-quaternary: #86868b;
+
+  /* shadcn legacy aliases (保留组件兼容) */
+  --background: var(--app-bg);
+  --foreground: var(--app-fg);
+  --card: var(--surface-solid);
+  --card-foreground: var(--text-primary);
+  --popover: var(--surface-solid);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--apple-blue);
+  --primary-foreground: #ffffff;
+  --secondary: rgba(0, 0, 0, 0.04);
+  --secondary-foreground: var(--text-primary);
+  --muted: rgba(0, 0, 0, 0.04);
+  --muted-foreground: var(--text-tertiary);
+  --accent: rgba(0, 122, 255, 0.10);
+  --accent-foreground: var(--apple-blue);
+  --destructive: var(--apple-red);
+  --border: var(--hairline);
+  --input: var(--hairline);
+  --ring: var(--apple-blue);
+
+  /* Chart palette — Apple system color order */
+  --chart-1: var(--apple-blue);
+  --chart-2: var(--apple-purple);
+  --chart-3: var(--apple-teal);
+  --chart-4: var(--apple-orange);
+  --chart-5: var(--apple-pink);
+  --chart-6: var(--apple-green);
+  --chart-7: var(--apple-indigo);
+
+  --radius: 0.875rem;
+  --sidebar: var(--surface-solid);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: var(--apple-blue);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--apple-blue);
+  --sidebar-border: var(--hairline);
+  --sidebar-ring: var(--apple-blue);
+
+  /* Layered shadows (multi-stop, 苹果常用) */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.02);
+  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-3: 0 20px 40px -12px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-glow-blue: 0 8px 32px -8px rgba(0, 122, 255, 0.25);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --app-bg: #000000;
+  --app-fg: #f5f5f7;
+  --surface: rgba(28, 28, 30, 0.72);
+  --surface-solid: #1c1c1e;
+  --surface-elevated: rgba(44, 44, 46, 0.92);
+  --hairline: rgba(255, 255, 255, 0.10);
+  --hairline-strong: rgba(255, 255, 255, 0.18);
+
+  --apple-blue: #0a84ff;
+  --apple-teal: #5ac8fa;
+  --apple-green: #30d158;
+  --apple-orange: #ff9f0a;
+  --apple-red: #ff453a;
+  --apple-purple: #bf5af2;
+  --apple-pink: #ff375f;
+  --apple-yellow: #ffd60a;
+  --apple-indigo: #5e5ce6;
+
+  --text-primary: #f5f5f7;
+  --text-secondary: #c7c7cc;
+  --text-tertiary: #98989d;
+  --text-quaternary: #6c6c70;
+
+  --background: var(--app-bg);
+  --foreground: var(--app-fg);
+  --card: var(--surface-solid);
+  --card-foreground: var(--text-primary);
+  --popover: var(--surface-elevated);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--apple-blue);
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.08);
+  --secondary-foreground: var(--text-primary);
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: var(--text-tertiary);
+  --accent: rgba(10, 132, 255, 0.18);
+  --accent-foreground: var(--apple-teal);
+  --destructive: var(--apple-red);
+  --border: var(--hairline);
+  --input: var(--hairline-strong);
+  --ring: var(--apple-blue);
+
+  --chart-1: var(--apple-blue);
+  --chart-2: var(--apple-purple);
+  --chart-3: var(--apple-teal);
+  --chart-4: var(--apple-orange);
+  --chart-5: var(--apple-pink);
+  --chart-6: var(--apple-green);
+  --chart-7: var(--apple-indigo);
+
+  --sidebar: var(--surface-solid);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: var(--apple-blue);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--apple-teal);
+  --sidebar-border: var(--hairline);
+  --sidebar-ring: var(--apple-blue);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-3: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+  --shadow-glow-blue: 0 8px 32px -8px rgba(10, 132, 255, 0.35);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply font-sans;
+    font-feature-settings: "cv11", "ss01", "ss03", "kern";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(0, 122, 255, 0.07), transparent 60%),
+      radial-gradient(1000px 600px at 100% 10%, rgba(175, 82, 222, 0.06), transparent 60%),
+      var(--app-bg);
+    min-height: 100vh;
+  }
+  .dark body {
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(10, 132, 255, 0.10), transparent 60%),
+      radial-gradient(1000px 600px at 100% 10%, rgba(191, 90, 242, 0.06), transparent 60%),
+      var(--app-bg);
+  }
+  /* Mono numeric defaults — tabular for tables / KPIs */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  /* KaTeX inherits body color */
+  .katex {
+    color: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ───────── Reusable surface utilities ───────── */
+@utility surface-card {
+  background: var(--surface);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2);
+}
+
+@utility surface-card-solid {
+  background: var(--surface-solid);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2);
+}
+
+@utility hairline-b {
+  border-bottom: 1px solid var(--hairline);
+}
+
+@utility hairline-t {
+  border-top: 1px solid var(--hairline);
+}
+
+@utility text-secondary {
+  color: var(--text-secondary);
+}
+
+@utility text-tertiary {
+  color: var(--text-tertiary);
+}
+
+@utility text-quaternary {
+  color: var(--text-quaternary);
 }
