@@ -1,7 +1,7 @@
 "use client";
 
 import { BlockMath } from "react-katex";
-import { BookOpen, ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import {
   Collapsible,
@@ -13,53 +13,51 @@ import { CELL_SYNTHESIS } from "@/lib/data/cellSynthesis";
 import { DONORS } from "@/lib/data/donors";
 import { ACCEPTOR_IDS, DONOR_IDS } from "@/lib/types";
 
+/**
+ * 默认收起为页脚一条文字链接，点击才展开完整参考表。
+ * 不再占据视觉权重。
+ */
 export function HalfReactionReference() {
   return (
-    <Collapsible className="surface-card overflow-hidden">
-      <CollapsibleTrigger className="group flex w-full cursor-pointer items-center justify-between gap-2 px-5 py-3.5 text-left">
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[rgba(0,122,255,0.10)] text-[var(--apple-blue)] dark:bg-[rgba(10,132,255,0.16)] dark:text-[var(--apple-teal)]">
-            <BookOpen className="h-4 w-4" />
+    <Collapsible className="group/ref mt-2">
+      <div className="flex justify-center">
+        <CollapsibleTrigger className="text-tertiary inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[12px] transition hover:text-[var(--apple-blue)]">
+          <span>查看半反应库（13 条，每 mol e⁻ 基准）</span>
+          <ChevronRight className="h-3.5 w-3.5 transition-transform group-data-[panel-open]/ref:rotate-90" />
+        </CollapsibleTrigger>
+      </div>
+      <CollapsibleContent className="mt-3">
+        <div className="surface-card p-5">
+          <div className="grid gap-5 lg:grid-cols-3">
+            <Section title="电子供体（氧化）" accent="blue">
+              <ul className="space-y-2.5">
+                {DONOR_IDS.map((id) => (
+                  <RefItem
+                    key={id}
+                    name={DONORS[id].displayName}
+                    tex={DONORS[id].referenceKatex}
+                  />
+                ))}
+              </ul>
+            </Section>
+            <Section title="电子受体（还原）" accent="orange">
+              <ul className="space-y-2.5">
+                {ACCEPTOR_IDS.map((id) => (
+                  <RefItem
+                    key={id}
+                    name={ACCEPTORS[id].displayName}
+                    tex={ACCEPTORS[id].referenceKatex}
+                  />
+                ))}
+              </ul>
+            </Section>
+            <Section title="细胞合成" accent="green">
+              <RefItem
+                name={CELL_SYNTHESIS.displayName}
+                tex={CELL_SYNTHESIS.referenceKatex}
+              />
+            </Section>
           </div>
-          <div>
-            <div className="text-[13px] font-semibold">半反应参考表</div>
-            <div className="text-quaternary text-[11px]">
-              每 mol e⁻ · 引擎自动配平
-            </div>
-          </div>
-        </div>
-        <ChevronDown className="text-tertiary h-4 w-4 shrink-0 transition-transform group-data-[panel-open]:rotate-180" />
-      </CollapsibleTrigger>
-      <CollapsibleContent className="hairline-t px-5 pb-5 pt-4">
-        <div className="grid gap-5 lg:grid-cols-3">
-          <Section title="电子供体（氧化）" accent="blue">
-            <ul className="space-y-2.5">
-              {DONOR_IDS.map((id) => (
-                <RefItem
-                  key={id}
-                  name={DONORS[id].displayName}
-                  tex={DONORS[id].referenceKatex}
-                />
-              ))}
-            </ul>
-          </Section>
-          <Section title="电子受体（还原）" accent="orange">
-            <ul className="space-y-2.5">
-              {ACCEPTOR_IDS.map((id) => (
-                <RefItem
-                  key={id}
-                  name={ACCEPTORS[id].displayName}
-                  tex={ACCEPTORS[id].referenceKatex}
-                />
-              ))}
-            </ul>
-          </Section>
-          <Section title="细胞合成" accent="green">
-            <RefItem
-              name={CELL_SYNTHESIS.displayName}
-              tex={CELL_SYNTHESIS.referenceKatex}
-            />
-          </Section>
         </div>
       </CollapsibleContent>
     </Collapsible>
