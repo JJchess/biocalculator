@@ -8,7 +8,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowDownUp, ArrowDown, ArrowUp, Table2 } from "lucide-react";
+import { ArrowDownUp, ArrowDown, ArrowUp } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import type { MassBalanceRow } from "@/lib/types";
@@ -57,7 +57,7 @@ export function MassBalanceTableV2({ rows }: Props) {
       },
       {
         accessorKey: "moles",
-        header: "n (mol)",
+        header: "mol",
         cell: ({ row }) => (
           <span
             className={`tabular font-mono ${
@@ -74,7 +74,7 @@ export function MassBalanceTableV2({ rows }: Props) {
       },
       {
         accessorKey: "massGrams",
-        header: "质量 (g)",
+        header: "质量 g",
         cell: ({ row }) => (
           <span
             className={`tabular font-mono ${
@@ -134,16 +134,10 @@ export function MassBalanceTableV2({ rows }: Props) {
 
   return (
     <div className="surface-card flex flex-col overflow-hidden">
-      <div className="hairline-b flex items-center gap-2 px-4 py-3">
-        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[rgba(0,122,255,0.10)] text-[var(--apple-blue)] dark:bg-[rgba(10,132,255,0.16)] dark:text-[var(--apple-teal)]">
-          <Table2 className="h-4 w-4" />
-        </div>
-        <div>
-          <div className="text-[13px] font-semibold">质量衡算</div>
-          <div className="text-quaternary text-[11px]">
-            橙=反应物，绿=产物；点击列头排序
-          </div>
-        </div>
+      <div className="hairline-b px-4 py-2.5">
+        <span className="text-tertiary text-[11px] font-semibold uppercase tracking-wider">
+          质量衡算
+        </span>
       </div>
       <div className="max-h-[360px] min-w-0 overflow-auto px-1">
         <table className="w-full text-[12.5px]">

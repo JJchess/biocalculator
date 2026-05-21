@@ -22,14 +22,14 @@ export function HalfReactionReference() {
     <Collapsible className="group/ref mt-2">
       <div className="flex justify-center">
         <CollapsibleTrigger className="text-tertiary inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[12px] transition hover:text-[var(--apple-blue)]">
-          <span>查看半反应库（13 条，每 mol e⁻ 基准）</span>
+          <span>半反应参考库</span>
           <ChevronRight className="h-3.5 w-3.5 transition-transform group-data-[panel-open]/ref:rotate-90" />
         </CollapsibleTrigger>
       </div>
       <CollapsibleContent className="mt-3">
         <div className="surface-card p-5">
           <div className="grid gap-5 lg:grid-cols-3">
-            <Section title="电子供体（氧化）" accent="blue">
+            <Section title="电子供体" accent="blue">
               <ul className="space-y-2.5">
                 {DONOR_IDS.map((id) => (
                   <RefItem
@@ -40,7 +40,7 @@ export function HalfReactionReference() {
                 ))}
               </ul>
             </Section>
-            <Section title="电子受体（还原）" accent="orange">
+            <Section title="电子受体" accent="orange">
               <ul className="space-y-2.5">
                 {ACCEPTOR_IDS.map((id) => (
                   <RefItem

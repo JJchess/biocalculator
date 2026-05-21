@@ -43,36 +43,32 @@ export function EquationHero({ result }: Props) {
         initial={{ opacity: 0.5, y: 4 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="overflow-x-auto px-5 pb-2 pt-7 text-center text-[16px] sm:text-[18px] md:text-[20px]"
+        className="overflow-x-auto px-6 pb-3 pt-9 text-center text-[17px] sm:text-[20px] md:text-[23px]"
       >
         <BlockMath math={result.equationKatex} />
       </motion.div>
 
-      <div className="text-quaternary mb-3 text-center text-[10.5px] tracking-[0.14em]">
-        每 1 mol 电子供体 · 元素与电荷自动守恒
-      </div>
-
-      {/* 内嵌 KPI 三联 — 通过 hairline 与等式分隔 */}
+      {/* KPI 三联 */}
       <div className="grid grid-cols-3 border-t border-[var(--hairline)] divide-x divide-[var(--hairline)]">
         <Kpi
           label="生物量产率"
           symbol="Y"
           value={kpis.biomassYieldGperG}
-          unit="g/g 底物"
+          unit="g VSS / g 底物"
           format={{ maximumFractionDigits: 3 }}
           tint="green"
         />
         <Kpi
-          label={`${kpis.acceptorDisplayName} 消耗`}
+          label={kpis.acceptorDisplayName}
           value={kpis.acceptorMassPerDonor}
-          unit="g · per mol 供体"
+          unit="g / mol 底物"
           format={{ maximumFractionDigits: 2 }}
           tint="orange"
         />
         <Kpi
-          label="CO₂ 产生"
+          label="CO₂ 释放"
           value={kpis.co2GramsPerMolDonor}
-          unit="g · per mol 供体"
+          unit="g / mol 底物"
           format={{ maximumFractionDigits: 2 }}
           tint="blue"
         />

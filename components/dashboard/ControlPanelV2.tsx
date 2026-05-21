@@ -1,7 +1,5 @@
 "use client";
 
-import { FlaskConical, Sparkles, Sliders } from "lucide-react";
-
 import {
   Select,
   SelectContent,
@@ -28,24 +26,8 @@ export function ControlPanelV2({
   onFsChange,
 }: ControlPanelProps) {
   return (
-    <aside className="surface-card flex h-fit flex-col gap-5 p-5">
-      <header>
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[rgba(0,122,255,0.10)] text-[var(--apple-blue)] dark:bg-[rgba(10,132,255,0.16)] dark:text-[var(--apple-teal)]">
-            <Sliders className="h-4 w-4" />
-          </div>
-          <div className="text-[13px] font-semibold">反应条件</div>
-        </div>
-        <p className="text-quaternary mt-1 text-[11.5px] leading-relaxed">
-          选择电子供体 / 受体，调整细胞合成分数 f<sub>s</sub>。
-        </p>
-      </header>
-
-      <PickerGroup
-        label="电子供体"
-        accent="blue"
-        icon={<FlaskConical className="h-3.5 w-3.5" />}
-      >
+    <aside className="surface-card flex h-fit flex-col gap-4 p-4">
+      <PickerGroup label="电子供体" accent="blue">
         <Select value={donorId} onValueChange={(v) => onDonorChange(v as typeof donorId)}>
           <SelectTrigger className="h-10 w-full rounded-xl border-[var(--hairline)] bg-[var(--surface-solid)] text-[13px] font-medium shadow-[var(--shadow-1)]">
             <SelectValue />
@@ -64,11 +46,7 @@ export function ControlPanelV2({
         </Select>
       </PickerGroup>
 
-      <PickerGroup
-        label="电子受体"
-        accent="orange"
-        icon={<Sparkles className="h-3.5 w-3.5" />}
-      >
+      <PickerGroup label="电子受体" accent="orange">
         <Select value={acceptorId} onValueChange={(v) => onAcceptorChange(v as typeof acceptorId)}>
           <SelectTrigger className="h-10 w-full rounded-xl border-[var(--hairline)] bg-[var(--surface-solid)] text-[13px] font-medium shadow-[var(--shadow-1)]">
             <SelectValue />
@@ -94,12 +72,10 @@ export function ControlPanelV2({
 
 function PickerGroup({
   label,
-  icon,
   accent,
   children,
 }: {
   label: string;
-  icon: React.ReactNode;
   accent: "blue" | "orange";
   children: React.ReactNode;
 }) {
@@ -109,10 +85,7 @@ function PickerGroup({
       : "text-[#b35900] dark:text-[var(--apple-orange)]";
   return (
     <div className="flex flex-col gap-1.5">
-      <div className={`flex items-center gap-1.5 text-[11px] font-medium tracking-wide ${tint}`}>
-        {icon}
-        <span>{label}</span>
-      </div>
+      <span className={`text-[11px] font-semibold tracking-wide ${tint}`}>{label}</span>
       {children}
     </div>
   );
