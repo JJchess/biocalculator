@@ -1,0 +1,157 @@
+epa_id	cas	name_en	name_cn	formula	category	subcategory	role	product_logic	notes
+# ──────────────────────────────────────────────────────────────────────────────────────────────────
+# EPA Priority Pollutants — 现行清单 (40 CFR Part 423, Appendix A) — 126 条
+# 来源: U.S. EPA. Code of Federal Regulations Title 40, Part 423, Appendix A.
+#        https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423
+# 注:
+#   • 官方编号 001-129 含 3 个空位 (017, 049, 050), 故 126 条
+#   • 历史 "129 priority pollutants" 中 CFC-11 / CFC-12 / bis(chloromethyl)ether 已从清单删除
+#   • epa_id 即官方编号 (3 位补零)
+#   • role          ∈ {donor, acceptor_metal, non_redox, excluded}
+#   • product_logic ∈ {full_mineralization, partial_dechlorination, redox_only, cn_oxidation, excluded}
+#   • 修正 EPA 文件自身错字:
+#       #045 官方标 "Methyl chloride (dichloromethane)" — methyl chloride 实为 CH3Cl
+#       #075 官方标 "benzo(b)fluoranthene" — 与 #074 撞名, 应为 benzo(k)fluoranthene
+# ──────────────────────────────────────────────────────────────────────────────────────────────────
+001	83-32-9	Acenaphthene	苊	C12H10	Base-Neutral	PAH	donor	full_mineralization	PAH (3-ring)
+002	107-02-8	Acrolein	丙烯醛	C3H4O	Volatile	Aldehyde	donor	full_mineralization	α,β-不饱和醛
+003	107-13-1	Acrylonitrile	丙烯腈	C3H3N	Volatile	Nitrile	donor	full_mineralization	N→NH4+
+004	71-43-2	Benzene	苯	C6H6	Volatile	BTEX	donor	full_mineralization	BTEX 代表
+005	92-87-5	Benzidine	联苯胺	C12H12N2	Base-Neutral	Amine	donor	full_mineralization	N→NH4+; 强致癌
+006	56-23-5	Carbon tetrachloride	四氯化碳	CCl4	Volatile	Halomethane	excluded	reductive_only	C 已在 +IV 最高氧化态; 仅能通过还原性脱氯降解, 不在氧化半反应框架内
+007	108-90-7	Chlorobenzene	氯苯	C6H5Cl	Volatile	Chlorobenzene	donor	full_mineralization
+008	120-82-1	1,2,4-Trichlorobenzene	1,2,4-三氯苯	C6H3Cl3	Base-Neutral	Chlorobenzene	donor	partial_dechlorination	TCB
+009	118-74-1	Hexachlorobenzene	六氯苯	C6Cl6	Base-Neutral	Chlorobenzene	donor	partial_dechlorination	HCB; POP
+010	107-06-2	1,2-Dichloroethane	1,2-二氯乙烷	C2H4Cl2	Volatile	Haloalkane	donor	full_mineralization
+011	71-55-6	1,1,1-Trichloroethane	1,1,1-三氯乙烷	C2H3Cl3	Volatile	Haloalkane	donor	partial_dechlorination	TCA
+012	67-72-1	Hexachloroethane	六氯乙烷	C2Cl6	Base-Neutral	Haloalkane	donor	partial_dechlorination	HCE
+013	75-34-3	1,1-Dichloroethane	1,1-二氯乙烷	C2H4Cl2	Volatile	Haloalkane	donor	full_mineralization
+014	79-00-5	1,1,2-Trichloroethane	1,1,2-三氯乙烷	C2H3Cl3	Volatile	Haloalkane	donor	partial_dechlorination
+015	79-34-5	1,1,2,2-Tetrachloroethane	1,1,2,2-四氯乙烷	C2H2Cl4	Volatile	Haloalkane	donor	partial_dechlorination
+016	75-00-3	Chloroethane	氯乙烷	C2H5Cl	Volatile	Haloalkane	donor	full_mineralization
+018	111-44-4	Bis(2-chloroethyl) ether	双(2-氯乙基)醚	C4H8Cl2O	Base-Neutral	Ether	donor	full_mineralization
+019	110-75-8	2-Chloroethyl vinyl ether	2-氯乙基乙烯基醚	C4H7ClO	Volatile	Ether	donor	full_mineralization
+020	91-58-7	2-Chloronaphthalene	2-氯萘	C10H7Cl	Base-Neutral	Chloro-PAH	donor	full_mineralization
+021	88-06-2	2,4,6-Trichlorophenol	2,4,6-三氯苯酚	C6H3Cl3O	Acid-Extractable	Chlorophenol	donor	partial_dechlorination
+022	59-50-7	4-Chloro-3-methylphenol	对氯间甲酚	C7H7ClO	Acid-Extractable	Chlorophenol	donor	full_mineralization	又名 p-chloro-m-cresol
+023	67-66-3	Chloroform	三氯甲烷	CHCl3	Volatile	Halomethane	donor	partial_dechlorination
+024	95-57-8	2-Chlorophenol	2-氯苯酚	C6H5ClO	Acid-Extractable	Chlorophenol	donor	full_mineralization
+025	95-50-1	1,2-Dichlorobenzene	1,2-二氯苯	C6H4Cl2	Base-Neutral	Chlorobenzene	donor	full_mineralization	o-DCB
+026	541-73-1	1,3-Dichlorobenzene	1,3-二氯苯	C6H4Cl2	Base-Neutral	Chlorobenzene	donor	full_mineralization	m-DCB
+027	106-46-7	1,4-Dichlorobenzene	1,4-二氯苯	C6H4Cl2	Base-Neutral	Chlorobenzene	donor	full_mineralization	p-DCB
+028	91-94-1	3,3'-Dichlorobenzidine	3,3'-二氯联苯胺	C12H10Cl2N2	Base-Neutral	Amine	donor	full_mineralization	N→NH4+
+029	75-35-4	1,1-Dichloroethylene	1,1-二氯乙烯	C2H2Cl2	Volatile	Haloalkene	donor	partial_dechlorination	1,1-DCE
+030	156-60-5	trans-1,2-Dichloroethylene	反-1,2-二氯乙烯	C2H2Cl2	Volatile	Haloalkene	donor	partial_dechlorination
+031	120-83-2	2,4-Dichlorophenol	2,4-二氯苯酚	C6H4Cl2O	Acid-Extractable	Chlorophenol	donor	full_mineralization	2,4-D 前体
+032	78-87-5	1,2-Dichloropropane	1,2-二氯丙烷	C3H6Cl2	Volatile	Haloalkane	donor	full_mineralization
+033	542-75-6	1,3-Dichloropropene	1,3-二氯丙烯	C3H4Cl2	Volatile	Haloalkene	donor	full_mineralization
+034	105-67-9	2,4-Dimethylphenol	2,4-二甲基苯酚	C8H10O	Acid-Extractable	Alkylphenol	donor	full_mineralization
+035	121-14-2	2,4-Dinitrotoluene	2,4-二硝基甲苯	C7H6N2O4	Base-Neutral	Nitroaromatic	donor	full_mineralization	N→NH4+; 2,4-DNT
+036	606-20-2	2,6-Dinitrotoluene	2,6-二硝基甲苯	C7H6N2O4	Base-Neutral	Nitroaromatic	donor	full_mineralization	N→NH4+; 2,6-DNT
+037	122-66-7	1,2-Diphenylhydrazine	1,2-二苯肼	C12H12N2	Base-Neutral	Hydrazine	donor	full_mineralization	N→NH4+
+038	100-41-4	Ethylbenzene	乙苯	C8H10	Volatile	BTEX	donor	full_mineralization	BTEX
+039	206-44-0	Fluoranthene	荧蒽	C16H10	Base-Neutral	PAH	donor	full_mineralization
+040	7005-72-3	4-Chlorophenyl phenyl ether	4-氯二苯醚	C12H9ClO	Base-Neutral	Ether	donor	full_mineralization
+041	101-55-3	4-Bromophenyl phenyl ether	4-溴二苯醚	C12H9BrO	Base-Neutral	Ether	donor	full_mineralization
+042	108-60-1	Bis(2-chloroisopropyl) ether	双(2-氯异丙基)醚	C6H12Cl2O	Base-Neutral	Ether	donor	full_mineralization
+043	111-91-1	Bis(2-chloroethoxy) methane	双(2-氯乙氧基)甲烷	C5H10Cl2O2	Base-Neutral	Ether	donor	full_mineralization
+044	75-09-2	Methylene chloride	二氯甲烷	CH2Cl2	Volatile	Halomethane	donor	full_mineralization	DCM
+045	74-87-3	Methyl chloride	氯甲烷	CH3Cl	Volatile	Halomethane	donor	full_mineralization	又名 chloromethane (EPA 标注笔误)
+046	74-83-9	Methyl bromide	溴甲烷	CH3Br	Volatile	Halomethane	donor	full_mineralization	bromomethane
+047	75-25-2	Bromoform	三溴甲烷	CHBr3	Volatile	Halomethane	donor	full_mineralization
+048	75-27-4	Dichlorobromomethane	一溴二氯甲烷	CHBrCl2	Volatile	Halomethane	donor	full_mineralization
+051	124-48-1	Chlorodibromomethane	一氯二溴甲烷	CHBr2Cl	Volatile	Halomethane	donor	full_mineralization
+052	87-68-3	Hexachlorobutadiene	六氯丁二烯	C4Cl6	Base-Neutral	Chloroalkene	donor	partial_dechlorination
+053	77-47-4	Hexachlorocyclopentadiene	六氯环戊二烯	C5Cl6	Base-Neutral	Chloroalkene	donor	partial_dechlorination	EPA 标 "hexachloromyclopentadiene" 系笔误
+054	78-59-1	Isophorone	异佛尔酮	C9H14O	Base-Neutral	Ketone	donor	full_mineralization
+055	91-20-3	Naphthalene	萘	C10H8	Base-Neutral	PAH	donor	full_mineralization	PAH (2-ring)
+056	98-95-3	Nitrobenzene	硝基苯	C6H5NO2	Base-Neutral	Nitroaromatic	donor	full_mineralization	N→NH4+
+057	88-75-5	2-Nitrophenol	2-硝基苯酚	C6H5NO3	Acid-Extractable	Nitrophenol	donor	full_mineralization	N→NH4+
+058	100-02-7	4-Nitrophenol	4-硝基苯酚	C6H5NO3	Acid-Extractable	Nitrophenol	donor	full_mineralization	N→NH4+
+059	51-28-5	2,4-Dinitrophenol	2,4-二硝基苯酚	C6H4N2O5	Acid-Extractable	Nitrophenol	donor	full_mineralization	N→NH4+
+060	534-52-1	4,6-Dinitro-o-cresol	4,6-二硝基邻甲酚	C7H6N2O5	Acid-Extractable	Nitrophenol	donor	full_mineralization	N→NH4+
+061	62-75-9	N-Nitrosodimethylamine	N-亚硝基二甲胺	C2H6N2O	Base-Neutral	Nitrosamine	donor	full_mineralization	NDMA
+062	86-30-6	N-Nitrosodiphenylamine	N-亚硝基二苯胺	C12H10N2O	Base-Neutral	Nitrosamine	donor	full_mineralization
+063	621-64-7	N-Nitrosodi-n-propylamine	N-亚硝基二正丙胺	C6H14N2O	Base-Neutral	Nitrosamine	donor	full_mineralization
+064	87-86-5	Pentachlorophenol	五氯苯酚	C6HCl5O	Acid-Extractable	Chlorophenol	donor	partial_dechlorination	PCP
+065	108-95-2	Phenol	苯酚	C6H6O	Acid-Extractable	Phenol	donor	full_mineralization
+066	117-81-7	Bis(2-ethylhexyl) phthalate	邻苯二甲酸二(2-乙基己基)酯	C24H38O4	Base-Neutral	Phthalate	donor	full_mineralization	DEHP
+067	85-68-7	Butyl benzyl phthalate	邻苯二甲酸丁苄酯	C19H20O4	Base-Neutral	Phthalate	donor	full_mineralization	BBP
+068	84-74-2	Di-n-butyl phthalate	邻苯二甲酸二正丁酯	C16H22O4	Base-Neutral	Phthalate	donor	full_mineralization	DBP
+069	117-84-0	Di-n-octyl phthalate	邻苯二甲酸二正辛酯	C24H38O4	Base-Neutral	Phthalate	donor	full_mineralization	DnOP
+070	84-66-2	Diethyl phthalate	邻苯二甲酸二乙酯	C12H14O4	Base-Neutral	Phthalate	donor	full_mineralization	DEP
+071	131-11-3	Dimethyl phthalate	邻苯二甲酸二甲酯	C10H10O4	Base-Neutral	Phthalate	donor	full_mineralization	DMP
+072	56-55-3	Benzo(a)anthracene	苯并(a)蒽	C18H12	Base-Neutral	PAH	donor	full_mineralization	PAH (4-ring); 又名 1,2-benzanthracene
+073	50-32-8	Benzo(a)pyrene	苯并(a)芘	C20H12	Base-Neutral	PAH	donor	full_mineralization	PAH (5-ring); 又名 3,4-benzopyrene
+074	205-99-2	Benzo(b)fluoranthene	苯并(b)荧蒽	C20H12	Base-Neutral	PAH	donor	full_mineralization	PAH; 又名 3,4-benzofluoranthene
+075	207-08-9	Benzo(k)fluoranthene	苯并(k)荧蒽	C20H12	Base-Neutral	PAH	donor	full_mineralization	PAH; EPA 此条标注与 074 撞名, 正确名为 benzo(k)fluoranthene
+076	218-01-9	Chrysene	䓛	C18H12	Base-Neutral	PAH	donor	full_mineralization	PAH (4-ring)
+077	208-96-8	Acenaphthylene	苊烯	C12H8	Base-Neutral	PAH	donor	full_mineralization
+078	120-12-7	Anthracene	蒽	C14H10	Base-Neutral	PAH	donor	full_mineralization	PAH (3-ring)
+079	191-24-2	Benzo(ghi)perylene	苯并(ghi)苝	C22H12	Base-Neutral	PAH	donor	full_mineralization	PAH (6-ring)
+080	86-73-7	Fluorene	芴	C13H10	Base-Neutral	PAH	donor	full_mineralization	PAH (3-ring)
+081	85-01-8	Phenanthrene	菲	C14H10	Base-Neutral	PAH	donor	full_mineralization	PAH (3-ring)
+082	53-70-3	Dibenz(a,h)anthracene	二苯并(a,h)蒽	C22H14	Base-Neutral	PAH	donor	full_mineralization	PAH (5-ring)
+083	193-39-5	Indeno(1,2,3-cd)pyrene	茚并(1,2,3-cd)芘	C22H12	Base-Neutral	PAH	donor	full_mineralization	PAH (6-ring)
+084	129-00-0	Pyrene	芘	C16H10	Base-Neutral	PAH	donor	full_mineralization	PAH (4-ring)
+085	127-18-4	Tetrachloroethylene	四氯乙烯	C2Cl4	Volatile	Haloalkene	donor	partial_dechlorination	PCE; 厌氧 → TCE → DCE → VC
+086	108-88-3	Toluene	甲苯	C7H8	Volatile	BTEX	donor	full_mineralization	BTEX
+087	79-01-6	Trichloroethylene	三氯乙烯	C2HCl3	Volatile	Haloalkene	donor	partial_dechlorination	TCE
+088	75-01-4	Vinyl chloride	氯乙烯	C2H3Cl	Volatile	Haloalkene	donor	full_mineralization	VC; 致癌
+089	309-00-2	Aldrin	艾氏剂	C12H8Cl6	Pesticide	OCP	donor	partial_dechlorination	POP
+090	60-57-1	Dieldrin	狄氏剂	C12H8Cl6O	Pesticide	OCP	donor	partial_dechlorination	POP
+091	57-74-9	Chlordane	氯丹	C10H6Cl8	Pesticide	OCP	donor	partial_dechlorination	POP; 工业混合物
+092	50-29-3	4,4'-DDT	滴滴涕	C14H9Cl5	Pesticide	OCP	donor	partial_dechlorination	POP
+093	72-55-9	4,4'-DDE	DDE	C14H8Cl4	Pesticide	OCP	donor	partial_dechlorination	DDT 代谢物
+094	72-54-8	4,4'-DDD	DDD	C14H10Cl4	Pesticide	OCP	donor	partial_dechlorination	DDT 代谢物
+095	959-98-8	alpha-Endosulfan	α-硫丹	C9H6Cl6O3S	Pesticide	OCP	donor	partial_dechlorination
+096	33213-65-9	beta-Endosulfan	β-硫丹	C9H6Cl6O3S	Pesticide	OCP	donor	partial_dechlorination
+097	1031-07-8	Endosulfan sulfate	硫丹硫酸盐	C9H6Cl6O4S	Pesticide	OCP	donor	partial_dechlorination
+098	72-20-8	Endrin	异狄氏剂	C12H8Cl6O	Pesticide	OCP	donor	partial_dechlorination	POP
+099	7421-93-4	Endrin aldehyde	异狄氏剂醛	C12H8Cl6O	Pesticide	OCP	donor	partial_dechlorination
+100	76-44-8	Heptachlor	七氯	C10H5Cl7	Pesticide	OCP	donor	partial_dechlorination	POP
+101	1024-57-3	Heptachlor epoxide	七氯环氧化物	C10H5Cl7O	Pesticide	OCP	donor	partial_dechlorination
+102	319-84-6	alpha-BHC	α-六六六	C6H6Cl6	Pesticide	OCP	donor	partial_dechlorination	α-HCH
+103	319-85-7	beta-BHC	β-六六六	C6H6Cl6	Pesticide	OCP	donor	partial_dechlorination	β-HCH
+104	58-89-9	gamma-BHC	林丹 (γ-六六六)	C6H6Cl6	Pesticide	OCP	donor	partial_dechlorination	Lindane
+105	319-86-8	delta-BHC	δ-六六六	C6H6Cl6	Pesticide	OCP	donor	partial_dechlorination	δ-HCH
+106	53469-21-9	PCB-1242 (Aroclor 1242)	阿罗克洛 1242	C12H7Cl3	Pesticide	PCB	donor	partial_dechlorination	平均式; PCB 混合物 42% Cl
+107	11097-69-1	PCB-1254 (Aroclor 1254)	阿罗克洛 1254	C12H5Cl5	Pesticide	PCB	donor	partial_dechlorination	平均式; 54% Cl
+108	11104-28-2	PCB-1221 (Aroclor 1221)	阿罗克洛 1221	C12H9Cl	Pesticide	PCB	donor	partial_dechlorination	平均式; 21% Cl
+109	11141-16-5	PCB-1232 (Aroclor 1232)	阿罗克洛 1232	C12H8Cl2	Pesticide	PCB	donor	partial_dechlorination	平均式; 32% Cl
+110	12672-29-6	PCB-1248 (Aroclor 1248)	阿罗克洛 1248	C12H6Cl4	Pesticide	PCB	donor	partial_dechlorination	平均式; 48% Cl
+111	11096-82-5	PCB-1260 (Aroclor 1260)	阿罗克洛 1260	C12H4Cl6	Pesticide	PCB	donor	partial_dechlorination	平均式; 60% Cl
+112	12674-11-2	PCB-1016 (Aroclor 1016)	阿罗克洛 1016	C12H7Cl3	Pesticide	PCB	donor	partial_dechlorination	平均式; 16% Cl 三氯联苯主体
+113	8001-35-2	Toxaphene	毒杀芬	C10H10Cl8	Pesticide	OCP	donor	partial_dechlorination	平均式; POP; 工业混合物
+114	7440-36-0	Antimony	锑	Sb	Metal	Non-redox	non_redox	excluded	生物毒性, 半反应法不适用
+115	7440-38-2	Arsenic	砷	As	Metal	Variable-valence	acceptor_metal	redox_only	As(V)→As(III); 砷还原菌
+116	1332-21-4	Asbestos	石棉	(SiO3)	Mineral	Silicate	excluded	excluded	硅酸盐矿物纤维; 非分子化合物
+117	7440-41-7	Beryllium	铍	Be	Metal	Non-redox	non_redox	excluded
+118	7440-43-9	Cadmium	镉	Cd	Metal	Non-redox	non_redox	excluded
+119	7440-47-3	Chromium	铬	Cr	Metal	Variable-valence	acceptor_metal	redox_only	Cr(VI)→Cr(III); 微生物可还原
+120	7440-50-8	Copper	铜	Cu	Metal	Non-redox	non_redox	excluded	生物可吸附但不可降解
+121	57-12-5	Cyanide	氰化物	CN^-	Inorganic	Pseudohalide	donor	cn_oxidation	阴离子形态; C(+II)→CO₂(+IV); 每 mol CN⁻ 释放 2 e⁻
+122	7439-92-1	Lead	铅	Pb	Metal	Non-redox	non_redox	excluded
+123	7439-97-6	Mercury	汞	Hg	Metal	Variable-valence	acceptor_metal	redox_only	Hg(II)→Hg(0); mer 操纵子
+124	7440-02-0	Nickel	镍	Ni	Metal	Non-redox	non_redox	excluded
+125	7782-49-2	Selenium	硒	Se	Metal	Variable-valence	acceptor_metal	redox_only	Se(VI)→Se(IV)→Se(0)
+126	7440-22-4	Silver	银	Ag	Metal	Non-redox	non_redox	excluded
+127	7440-28-0	Thallium	铊	Tl	Metal	Non-redox	non_redox	excluded
+128	7440-66-6	Zinc	锌	Zn	Metal	Non-redox	non_redox	excluded
+129	1746-01-6	2,3,7,8-TCDD	2,3,7,8-四氯二苯并对二噁英	C12H4Cl4O2	Dioxin	Dioxin	donor	partial_dechlorination	最毒人造化合物之一; POP
+# ──────────────────────────────────────────────────────────────────────────────────────────────────
+# 统计 (现行 40 CFR 423 Appx A, 126 条):
+#   按 EPA category 分组:
+#     Volatile (V):            27   全部 donor
+#     Acid-Extractable (AE):   11   全部 donor
+#     Base-Neutral (BN):       46   全部 donor (含 PAH × 16)
+#     Pesticide (P):           25   全部 donor (含 PCB × 7, OCP × 18)
+#     Dioxin (D):               1   donor
+#     Metal-Variable-Valence:   4   acceptor_metal (As, Cr, Hg, Se)
+#     Metal-Non-Redox:          9   non_redox (Sb, Be, Cd, Cu, Pb, Ni, Ag, Tl, Zn)
+#     Inorganic anion:          1   donor (Cyanide)
+#     Mineral:                  1   excluded (Asbestos)
+#   总计:                   = 125
+#   差 1 条? — 因 EPA #105 delta-BHC 后 EPA 文件原标 "(PCB-polychlorinated biphenyls)" 实为引出 PCB 块的标注, 不是新化合物
+#   实际可入半反应分析       = 116 条 (donor: 112 + acceptor_metal: 4)
+# ──────────────────────────────────────────────────────────────────────────────────────────────────

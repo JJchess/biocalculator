@@ -37,10 +37,6 @@ export function AppBar({ result }: Props) {
         <em className="accent-ink font-normal italic">半反应法</em>{" "}
         合并方程
       </h1>
-      <p className="ink-3 mt-2.5 text-[14.5px] italic leading-relaxed">
-        基于元素—电荷守恒自动配平
-        <span className="ink-4 not-italic"> · 每 1 mol 电子供体基准</span>
-      </p>
     </header>
   );
 }

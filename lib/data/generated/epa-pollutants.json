@@ -1,0 +1,4950 @@
+{
+  "meta": {
+    "source": "U.S. EPA 40 CFR Part 423, Appendix A — Priority Pollutants",
+    "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423",
+    "generatedAt": "2026-05-21T08:27:46.088Z",
+    "generator": "scripts/build-epa-pollutants.ts",
+    "total": 126,
+    "donors_balanced": 111,
+    "acceptors_balanced": 4,
+    "non_redox_recorded": 9,
+    "excluded": 2,
+    "balance_failures": 0
+  },
+  "entries": [
+    {
+      "epa_id": "001",
+      "cas": "83-32-9",
+      "name_en": "Acenaphthene",
+      "name_cn": "苊",
+      "formula": "C12H10",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (3-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=83-32-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_001": "-1/58",
+          "co2": "6/29",
+          "h2o": "-12/29",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 154.21200000000002,
+        "equationKatex": "\\frac{1}{58}\\,C_{12}H_{10} + \\frac{12}{29}\\,H_{2}O \\rightarrow \\frac{6}{29}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "002",
+      "cas": "107-02-8",
+      "name_en": "Acrolein",
+      "name_cn": "丙烯醛",
+      "formula": "C3H4O",
+      "category": "Volatile",
+      "subcategory": "Aldehyde",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "α,β-不饱和醛",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=107-02-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_002": "-1/14",
+          "co2": "3/14",
+          "h2o": "-5/14",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 56.064,
+        "equationKatex": "\\frac{1}{14}\\,C_{3}H_{4}O + \\frac{5}{14}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "003",
+      "cas": "107-13-1",
+      "name_en": "Acrylonitrile",
+      "name_cn": "丙烯腈",
+      "formula": "C3H3N",
+      "category": "Volatile",
+      "subcategory": "Nitrile",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=107-13-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_003": "-1/12",
+          "co2": "1/4",
+          "nh4": "1/12",
+          "h2o": "-1/2",
+          "h_ion": "11/12",
+          "e_minus": "1"
+        },
+        "molecularWeight": 53.064,
+        "equationKatex": "\\frac{1}{12}\\,C_{3}H_{3}N + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{12}\\,NH_{4}^{+} + \\frac{11}{12}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "004",
+      "cas": "71-43-2",
+      "name_en": "Benzene",
+      "name_cn": "苯",
+      "formula": "C6H6",
+      "category": "Volatile",
+      "subcategory": "BTEX",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "BTEX 代表",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=71-43-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_004": "-1/30",
+          "co2": "1/5",
+          "h2o": "-2/5",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 78.114,
+        "equationKatex": "\\frac{1}{30}\\,C_{6}H_{6} + \\frac{2}{5}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "005",
+      "cas": "92-87-5",
+      "name_en": "Benzidine",
+      "name_cn": "联苯胺",
+      "formula": "C12H12N2",
+      "category": "Base-Neutral",
+      "subcategory": "Amine",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+; 强致癌",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=92-87-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_005": "-1/54",
+          "co2": "2/9",
+          "nh4": "1/27",
+          "h2o": "-4/9",
+          "h_ion": "26/27",
+          "e_minus": "1"
+        },
+        "molecularWeight": 184.24200000000002,
+        "equationKatex": "\\frac{1}{54}\\,C_{12}H_{12}N_{2} + \\frac{4}{9}\\,H_{2}O \\rightarrow \\frac{2}{9}\\,CO_{2} + \\frac{1}{27}\\,NH_{4}^{+} + \\frac{26}{27}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "006",
+      "cas": "56-23-5",
+      "name_en": "Carbon tetrachloride",
+      "name_cn": "四氯化碳",
+      "formula": "CCl4",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "excluded",
+      "product_logic": "reductive_only",
+      "notes": "C 已在 +IV 最高氧化态; 仅能通过还原性脱氯降解, 不在氧化半反应框架内",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=56-23-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "007",
+      "cas": "108-90-7",
+      "name_en": "Chlorobenzene",
+      "name_cn": "氯苯",
+      "formula": "C6H5Cl",
+      "category": "Volatile",
+      "subcategory": "Chlorobenzene",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=108-90-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_007": "-1/28",
+          "co2": "3/14",
+          "chloride": "1/28",
+          "h2o": "-3/7",
+          "h_ion": "29/28",
+          "e_minus": "1"
+        },
+        "molecularWeight": 112.55600000000001,
+        "equationKatex": "\\frac{1}{28}\\,C_{6}H_{5}Cl + \\frac{3}{7}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + \\frac{1}{28}\\,Cl^{-} + \\frac{29}{28}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "008",
+      "cas": "120-82-1",
+      "name_en": "1,2,4-Trichlorobenzene",
+      "name_cn": "1,2,4-三氯苯",
+      "formula": "C6H3Cl3",
+      "category": "Base-Neutral",
+      "subcategory": "Chlorobenzene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "TCB",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=120-82-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_008": "-1/24",
+          "co2": "1/4",
+          "chloride": "1/8",
+          "h2o": "-1/2",
+          "h_ion": "9/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 181.44,
+        "equationKatex": "\\frac{1}{24}\\,C_{6}H_{3}Cl_{3} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{8}\\,Cl^{-} + \\frac{9}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "009",
+      "cas": "118-74-1",
+      "name_en": "Hexachlorobenzene",
+      "name_cn": "六氯苯",
+      "formula": "C6Cl6",
+      "category": "Base-Neutral",
+      "subcategory": "Chlorobenzene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "HCB; POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=118-74-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_009": "-1/18",
+          "co2": "1/3",
+          "chloride": "1/3",
+          "h2o": "-2/3",
+          "h_ion": "4/3",
+          "e_minus": "1"
+        },
+        "molecularWeight": 284.766,
+        "equationKatex": "\\frac{1}{18}\\,C_{6}Cl_{6} + \\frac{2}{3}\\,H_{2}O \\rightarrow \\frac{1}{3}\\,CO_{2} + \\frac{1}{3}\\,Cl^{-} + \\frac{4}{3}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "Cl": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "010",
+      "cas": "107-06-2",
+      "name_en": "1,2-Dichloroethane",
+      "name_cn": "1,2-二氯乙烷",
+      "formula": "C2H4Cl2",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=107-06-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_010": "-1/10",
+          "co2": "1/5",
+          "chloride": "1/5",
+          "h2o": "-2/5",
+          "h_ion": "6/5",
+          "e_minus": "1"
+        },
+        "molecularWeight": 98.95400000000001,
+        "equationKatex": "\\frac{1}{10}\\,C_{2}H_{4}Cl_{2} + \\frac{2}{5}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + \\frac{1}{5}\\,Cl^{-} + \\frac{6}{5}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "011",
+      "cas": "71-55-6",
+      "name_en": "1,1,1-Trichloroethane",
+      "name_cn": "1,1,1-三氯乙烷",
+      "formula": "C2H3Cl3",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "TCA",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=71-55-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_011": "-1/8",
+          "co2": "1/4",
+          "chloride": "3/8",
+          "h2o": "-1/2",
+          "h_ion": "11/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 133.39600000000002,
+        "equationKatex": "\\frac{1}{8}\\,C_{2}H_{3}Cl_{3} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{3}{8}\\,Cl^{-} + \\frac{11}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "012",
+      "cas": "67-72-1",
+      "name_en": "Hexachloroethane",
+      "name_cn": "六氯乙烷",
+      "formula": "C2Cl6",
+      "category": "Base-Neutral",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "HCE",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=67-72-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_012": "-1/2",
+          "co2": "1",
+          "chloride": "3",
+          "h2o": "-2",
+          "h_ion": "4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 236.722,
+        "equationKatex": "\\frac{1}{2}\\,C_{2}Cl_{6} + 2\\,H_{2}O \\rightarrow CO_{2} + 3\\,Cl^{-} + 4\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "Cl": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "013",
+      "cas": "75-34-3",
+      "name_en": "1,1-Dichloroethane",
+      "name_cn": "1,1-二氯乙烷",
+      "formula": "C2H4Cl2",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-34-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_013": "-1/10",
+          "co2": "1/5",
+          "chloride": "1/5",
+          "h2o": "-2/5",
+          "h_ion": "6/5",
+          "e_minus": "1"
+        },
+        "molecularWeight": 98.95400000000001,
+        "equationKatex": "\\frac{1}{10}\\,C_{2}H_{4}Cl_{2} + \\frac{2}{5}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + \\frac{1}{5}\\,Cl^{-} + \\frac{6}{5}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "014",
+      "cas": "79-00-5",
+      "name_en": "1,1,2-Trichloroethane",
+      "name_cn": "1,1,2-三氯乙烷",
+      "formula": "C2H3Cl3",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=79-00-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_014": "-1/8",
+          "co2": "1/4",
+          "chloride": "3/8",
+          "h2o": "-1/2",
+          "h_ion": "11/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 133.39600000000002,
+        "equationKatex": "\\frac{1}{8}\\,C_{2}H_{3}Cl_{3} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{3}{8}\\,Cl^{-} + \\frac{11}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "015",
+      "cas": "79-34-5",
+      "name_en": "1,1,2,2-Tetrachloroethane",
+      "name_cn": "1,1,2,2-四氯乙烷",
+      "formula": "C2H2Cl4",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=79-34-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_015": "-1/6",
+          "co2": "1/3",
+          "chloride": "2/3",
+          "h2o": "-2/3",
+          "h_ion": "5/3",
+          "e_minus": "1"
+        },
+        "molecularWeight": 167.83800000000002,
+        "equationKatex": "\\frac{1}{6}\\,C_{2}H_{2}Cl_{4} + \\frac{2}{3}\\,H_{2}O \\rightarrow \\frac{1}{3}\\,CO_{2} + \\frac{2}{3}\\,Cl^{-} + \\frac{5}{3}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "016",
+      "cas": "75-00-3",
+      "name_en": "Chloroethane",
+      "name_cn": "氯乙烷",
+      "formula": "C2H5Cl",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-00-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_016": "-1/12",
+          "co2": "1/6",
+          "chloride": "1/12",
+          "h2o": "-1/3",
+          "h_ion": "13/12",
+          "e_minus": "1"
+        },
+        "molecularWeight": 64.512,
+        "equationKatex": "\\frac{1}{12}\\,C_{2}H_{5}Cl + \\frac{1}{3}\\,H_{2}O \\rightarrow \\frac{1}{6}\\,CO_{2} + \\frac{1}{12}\\,Cl^{-} + \\frac{13}{12}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "018",
+      "cas": "111-44-4",
+      "name_en": "Bis(2-chloroethyl) ether",
+      "name_cn": "双(2-氯乙基)醚",
+      "formula": "C4H8Cl2O",
+      "category": "Base-Neutral",
+      "subcategory": "Ether",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=111-44-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_018": "-1/20",
+          "co2": "1/5",
+          "chloride": "1/10",
+          "h2o": "-7/20",
+          "h_ion": "11/10",
+          "e_minus": "1"
+        },
+        "molecularWeight": 143.007,
+        "equationKatex": "\\frac{1}{20}\\,C_{4}H_{8}Cl_{2}O + \\frac{7}{20}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + \\frac{1}{10}\\,Cl^{-} + \\frac{11}{10}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "019",
+      "cas": "110-75-8",
+      "name_en": "2-Chloroethyl vinyl ether",
+      "name_cn": "2-氯乙基乙烯基醚",
+      "formula": "C4H7ClO",
+      "category": "Volatile",
+      "subcategory": "Ether",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=110-75-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_019": "-1/20",
+          "co2": "1/5",
+          "chloride": "1/20",
+          "h2o": "-7/20",
+          "h_ion": "21/20",
+          "e_minus": "1"
+        },
+        "molecularWeight": 106.54899999999999,
+        "equationKatex": "\\frac{1}{20}\\,C_{4}H_{7}ClO + \\frac{7}{20}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + \\frac{1}{20}\\,Cl^{-} + \\frac{21}{20}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "020",
+      "cas": "91-58-7",
+      "name_en": "2-Chloronaphthalene",
+      "name_cn": "2-氯萘",
+      "formula": "C10H7Cl",
+      "category": "Base-Neutral",
+      "subcategory": "Chloro-PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=91-58-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_020": "-1/46",
+          "co2": "5/23",
+          "chloride": "1/46",
+          "h2o": "-10/23",
+          "h_ion": "47/46",
+          "e_minus": "1"
+        },
+        "molecularWeight": 162.61599999999999,
+        "equationKatex": "\\frac{1}{46}\\,C_{10}H_{7}Cl + \\frac{10}{23}\\,H_{2}O \\rightarrow \\frac{5}{23}\\,CO_{2} + \\frac{1}{46}\\,Cl^{-} + \\frac{47}{46}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "021",
+      "cas": "88-06-2",
+      "name_en": "2,4,6-Trichlorophenol",
+      "name_cn": "2,4,6-三氯苯酚",
+      "formula": "C6H3Cl3O",
+      "category": "Acid-Extractable",
+      "subcategory": "Chlorophenol",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=88-06-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_021": "-1/22",
+          "co2": "3/11",
+          "chloride": "3/22",
+          "h2o": "-1/2",
+          "h_ion": "25/22",
+          "e_minus": "1"
+        },
+        "molecularWeight": 197.439,
+        "equationKatex": "\\frac{1}{22}\\,C_{6}H_{3}Cl_{3}O + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{3}{11}\\,CO_{2} + \\frac{3}{22}\\,Cl^{-} + \\frac{25}{22}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "022",
+      "cas": "59-50-7",
+      "name_en": "4-Chloro-3-methylphenol",
+      "name_cn": "对氯间甲酚",
+      "formula": "C7H7ClO",
+      "category": "Acid-Extractable",
+      "subcategory": "Chlorophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "又名 p-chloro-m-cresol",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=59-50-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_022": "-1/32",
+          "co2": "7/32",
+          "chloride": "1/32",
+          "h2o": "-13/32",
+          "h_ion": "33/32",
+          "e_minus": "1"
+        },
+        "molecularWeight": 142.582,
+        "equationKatex": "\\frac{1}{32}\\,C_{7}H_{7}ClO + \\frac{13}{32}\\,H_{2}O \\rightarrow \\frac{7}{32}\\,CO_{2} + \\frac{1}{32}\\,Cl^{-} + \\frac{33}{32}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "023",
+      "cas": "67-66-3",
+      "name_en": "Chloroform",
+      "name_cn": "三氯甲烷",
+      "formula": "CHCl3",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=67-66-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_023": "-1/2",
+          "co2": "1/2",
+          "chloride": "3/2",
+          "h2o": "-1",
+          "h_ion": "5/2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 119.369,
+        "equationKatex": "\\frac{1}{2}\\,CHCl_{3} + H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + \\frac{3}{2}\\,Cl^{-} + \\frac{5}{2}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "024",
+      "cas": "95-57-8",
+      "name_en": "2-Chlorophenol",
+      "name_cn": "2-氯苯酚",
+      "formula": "C6H5ClO",
+      "category": "Acid-Extractable",
+      "subcategory": "Chlorophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=95-57-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_024": "-1/26",
+          "co2": "3/13",
+          "chloride": "1/26",
+          "h2o": "-11/26",
+          "h_ion": "27/26",
+          "e_minus": "1"
+        },
+        "molecularWeight": 128.555,
+        "equationKatex": "\\frac{1}{26}\\,C_{6}H_{5}ClO + \\frac{11}{26}\\,H_{2}O \\rightarrow \\frac{3}{13}\\,CO_{2} + \\frac{1}{26}\\,Cl^{-} + \\frac{27}{26}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "025",
+      "cas": "95-50-1",
+      "name_en": "1,2-Dichlorobenzene",
+      "name_cn": "1,2-二氯苯",
+      "formula": "C6H4Cl2",
+      "category": "Base-Neutral",
+      "subcategory": "Chlorobenzene",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "o-DCB",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=95-50-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_025": "-1/26",
+          "co2": "3/13",
+          "chloride": "1/13",
+          "h2o": "-6/13",
+          "h_ion": "14/13",
+          "e_minus": "1"
+        },
+        "molecularWeight": 146.998,
+        "equationKatex": "\\frac{1}{26}\\,C_{6}H_{4}Cl_{2} + \\frac{6}{13}\\,H_{2}O \\rightarrow \\frac{3}{13}\\,CO_{2} + \\frac{1}{13}\\,Cl^{-} + \\frac{14}{13}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "026",
+      "cas": "541-73-1",
+      "name_en": "1,3-Dichlorobenzene",
+      "name_cn": "1,3-二氯苯",
+      "formula": "C6H4Cl2",
+      "category": "Base-Neutral",
+      "subcategory": "Chlorobenzene",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "m-DCB",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=541-73-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_026": "-1/26",
+          "co2": "3/13",
+          "chloride": "1/13",
+          "h2o": "-6/13",
+          "h_ion": "14/13",
+          "e_minus": "1"
+        },
+        "molecularWeight": 146.998,
+        "equationKatex": "\\frac{1}{26}\\,C_{6}H_{4}Cl_{2} + \\frac{6}{13}\\,H_{2}O \\rightarrow \\frac{3}{13}\\,CO_{2} + \\frac{1}{13}\\,Cl^{-} + \\frac{14}{13}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "027",
+      "cas": "106-46-7",
+      "name_en": "1,4-Dichlorobenzene",
+      "name_cn": "1,4-二氯苯",
+      "formula": "C6H4Cl2",
+      "category": "Base-Neutral",
+      "subcategory": "Chlorobenzene",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "p-DCB",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=106-46-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_027": "-1/26",
+          "co2": "3/13",
+          "chloride": "1/13",
+          "h2o": "-6/13",
+          "h_ion": "14/13",
+          "e_minus": "1"
+        },
+        "molecularWeight": 146.998,
+        "equationKatex": "\\frac{1}{26}\\,C_{6}H_{4}Cl_{2} + \\frac{6}{13}\\,H_{2}O \\rightarrow \\frac{3}{13}\\,CO_{2} + \\frac{1}{13}\\,Cl^{-} + \\frac{14}{13}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "028",
+      "cas": "91-94-1",
+      "name_en": "3,3'-Dichlorobenzidine",
+      "name_cn": "3,3'-二氯联苯胺",
+      "formula": "C12H10Cl2N2",
+      "category": "Base-Neutral",
+      "subcategory": "Amine",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=91-94-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_028": "-1/50",
+          "co2": "6/25",
+          "chloride": "1/25",
+          "nh4": "1/25",
+          "h2o": "-12/25",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 253.12600000000003,
+        "equationKatex": "\\frac{1}{50}\\,C_{12}H_{10}Cl_{2}N_{2} + \\frac{12}{25}\\,H_{2}O \\rightarrow \\frac{6}{25}\\,CO_{2} + \\frac{1}{25}\\,Cl^{-} + \\frac{1}{25}\\,NH_{4}^{+} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "029",
+      "cas": "75-35-4",
+      "name_en": "1,1-Dichloroethylene",
+      "name_cn": "1,1-二氯乙烯",
+      "formula": "C2H2Cl2",
+      "category": "Volatile",
+      "subcategory": "Haloalkene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "1,1-DCE",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-35-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_029": "-1/8",
+          "co2": "1/4",
+          "chloride": "1/4",
+          "h2o": "-1/2",
+          "h_ion": "5/4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 96.938,
+        "equationKatex": "\\frac{1}{8}\\,C_{2}H_{2}Cl_{2} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{4}\\,Cl^{-} + \\frac{5}{4}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "030",
+      "cas": "156-60-5",
+      "name_en": "trans-1,2-Dichloroethylene",
+      "name_cn": "反-1,2-二氯乙烯",
+      "formula": "C2H2Cl2",
+      "category": "Volatile",
+      "subcategory": "Haloalkene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=156-60-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_030": "-1/8",
+          "co2": "1/4",
+          "chloride": "1/4",
+          "h2o": "-1/2",
+          "h_ion": "5/4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 96.938,
+        "equationKatex": "\\frac{1}{8}\\,C_{2}H_{2}Cl_{2} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{4}\\,Cl^{-} + \\frac{5}{4}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "031",
+      "cas": "120-83-2",
+      "name_en": "2,4-Dichlorophenol",
+      "name_cn": "2,4-二氯苯酚",
+      "formula": "C6H4Cl2O",
+      "category": "Acid-Extractable",
+      "subcategory": "Chlorophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "2,4-D 前体",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=120-83-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_031": "-1/24",
+          "co2": "1/4",
+          "chloride": "1/12",
+          "h2o": "-11/24",
+          "h_ion": "13/12",
+          "e_minus": "1"
+        },
+        "molecularWeight": 162.99699999999999,
+        "equationKatex": "\\frac{1}{24}\\,C_{6}H_{4}Cl_{2}O + \\frac{11}{24}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{12}\\,Cl^{-} + \\frac{13}{12}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "032",
+      "cas": "78-87-5",
+      "name_en": "1,2-Dichloropropane",
+      "name_cn": "1,2-二氯丙烷",
+      "formula": "C3H6Cl2",
+      "category": "Volatile",
+      "subcategory": "Haloalkane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=78-87-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_032": "-1/16",
+          "co2": "3/16",
+          "chloride": "1/8",
+          "h2o": "-3/8",
+          "h_ion": "9/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 112.98100000000001,
+        "equationKatex": "\\frac{1}{16}\\,C_{3}H_{6}Cl_{2} + \\frac{3}{8}\\,H_{2}O \\rightarrow \\frac{3}{16}\\,CO_{2} + \\frac{1}{8}\\,Cl^{-} + \\frac{9}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "033",
+      "cas": "542-75-6",
+      "name_en": "1,3-Dichloropropene",
+      "name_cn": "1,3-二氯丙烯",
+      "formula": "C3H4Cl2",
+      "category": "Volatile",
+      "subcategory": "Haloalkene",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=542-75-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_033": "-1/14",
+          "co2": "3/14",
+          "chloride": "1/7",
+          "h2o": "-3/7",
+          "h_ion": "8/7",
+          "e_minus": "1"
+        },
+        "molecularWeight": 110.965,
+        "equationKatex": "\\frac{1}{14}\\,C_{3}H_{4}Cl_{2} + \\frac{3}{7}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + \\frac{1}{7}\\,Cl^{-} + \\frac{8}{7}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "034",
+      "cas": "105-67-9",
+      "name_en": "2,4-Dimethylphenol",
+      "name_cn": "2,4-二甲基苯酚",
+      "formula": "C8H10O",
+      "category": "Acid-Extractable",
+      "subcategory": "Alkylphenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=105-67-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_034": "-1/40",
+          "co2": "1/5",
+          "h2o": "-3/8",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 122.16699999999999,
+        "equationKatex": "\\frac{1}{40}\\,C_{8}H_{10}O + \\frac{3}{8}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "035",
+      "cas": "121-14-2",
+      "name_en": "2,4-Dinitrotoluene",
+      "name_cn": "2,4-二硝基甲苯",
+      "formula": "C7H6N2O4",
+      "category": "Base-Neutral",
+      "subcategory": "Nitroaromatic",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+; 2,4-DNT",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=121-14-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_035": "-1/20",
+          "co2": "7/20",
+          "nh4": "1/10",
+          "h2o": "-1/2",
+          "h_ion": "9/10",
+          "e_minus": "1"
+        },
+        "molecularWeight": 182.135,
+        "equationKatex": "\\frac{1}{20}\\,C_{7}H_{6}N_{2}O_{4} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{7}{20}\\,CO_{2} + \\frac{1}{10}\\,NH_{4}^{+} + \\frac{9}{10}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "036",
+      "cas": "606-20-2",
+      "name_en": "2,6-Dinitrotoluene",
+      "name_cn": "2,6-二硝基甲苯",
+      "formula": "C7H6N2O4",
+      "category": "Base-Neutral",
+      "subcategory": "Nitroaromatic",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+; 2,6-DNT",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=606-20-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_036": "-1/20",
+          "co2": "7/20",
+          "nh4": "1/10",
+          "h2o": "-1/2",
+          "h_ion": "9/10",
+          "e_minus": "1"
+        },
+        "molecularWeight": 182.135,
+        "equationKatex": "\\frac{1}{20}\\,C_{7}H_{6}N_{2}O_{4} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{7}{20}\\,CO_{2} + \\frac{1}{10}\\,NH_{4}^{+} + \\frac{9}{10}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "037",
+      "cas": "122-66-7",
+      "name_en": "1,2-Diphenylhydrazine",
+      "name_cn": "1,2-二苯肼",
+      "formula": "C12H12N2",
+      "category": "Base-Neutral",
+      "subcategory": "Hydrazine",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=122-66-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_037": "-1/54",
+          "co2": "2/9",
+          "nh4": "1/27",
+          "h2o": "-4/9",
+          "h_ion": "26/27",
+          "e_minus": "1"
+        },
+        "molecularWeight": 184.24200000000002,
+        "equationKatex": "\\frac{1}{54}\\,C_{12}H_{12}N_{2} + \\frac{4}{9}\\,H_{2}O \\rightarrow \\frac{2}{9}\\,CO_{2} + \\frac{1}{27}\\,NH_{4}^{+} + \\frac{26}{27}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "038",
+      "cas": "100-41-4",
+      "name_en": "Ethylbenzene",
+      "name_cn": "乙苯",
+      "formula": "C8H10",
+      "category": "Volatile",
+      "subcategory": "BTEX",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "BTEX",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=100-41-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_038": "-1/42",
+          "co2": "4/21",
+          "h2o": "-8/21",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 106.16799999999999,
+        "equationKatex": "\\frac{1}{42}\\,C_{8}H_{10} + \\frac{8}{21}\\,H_{2}O \\rightarrow \\frac{4}{21}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "039",
+      "cas": "206-44-0",
+      "name_en": "Fluoranthene",
+      "name_cn": "荧蒽",
+      "formula": "C16H10",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=206-44-0",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_039": "-1/74",
+          "co2": "8/37",
+          "h2o": "-16/37",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 202.256,
+        "equationKatex": "\\frac{1}{74}\\,C_{16}H_{10} + \\frac{16}{37}\\,H_{2}O \\rightarrow \\frac{8}{37}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "040",
+      "cas": "7005-72-3",
+      "name_en": "4-Chlorophenyl phenyl ether",
+      "name_cn": "4-氯二苯醚",
+      "formula": "C12H9ClO",
+      "category": "Base-Neutral",
+      "subcategory": "Ether",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7005-72-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_040": "-1/54",
+          "co2": "2/9",
+          "chloride": "1/54",
+          "h2o": "-23/54",
+          "h_ion": "55/54",
+          "e_minus": "1"
+        },
+        "molecularWeight": 204.653,
+        "equationKatex": "\\frac{1}{54}\\,C_{12}H_{9}ClO + \\frac{23}{54}\\,H_{2}O \\rightarrow \\frac{2}{9}\\,CO_{2} + \\frac{1}{54}\\,Cl^{-} + \\frac{55}{54}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "041",
+      "cas": "101-55-3",
+      "name_en": "4-Bromophenyl phenyl ether",
+      "name_cn": "4-溴二苯醚",
+      "formula": "C12H9BrO",
+      "category": "Base-Neutral",
+      "subcategory": "Ether",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=101-55-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "bromide",
+          "formula": "Br^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_041": "-1/54",
+          "co2": "2/9",
+          "bromide": "1/54",
+          "h2o": "-23/54",
+          "h_ion": "55/54",
+          "e_minus": "1"
+        },
+        "molecularWeight": 249.107,
+        "equationKatex": "\\frac{1}{54}\\,C_{12}H_{9}BrO + \\frac{23}{54}\\,H_{2}O \\rightarrow \\frac{2}{9}\\,CO_{2} + \\frac{1}{54}\\,Br^{-} + \\frac{55}{54}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Br": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "042",
+      "cas": "108-60-1",
+      "name_en": "Bis(2-chloroisopropyl) ether",
+      "name_cn": "双(2-氯异丙基)醚",
+      "formula": "C6H12Cl2O",
+      "category": "Base-Neutral",
+      "subcategory": "Ether",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=108-60-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_042": "-1/32",
+          "co2": "3/16",
+          "chloride": "1/16",
+          "h2o": "-11/32",
+          "h_ion": "17/16",
+          "e_minus": "1"
+        },
+        "molecularWeight": 171.061,
+        "equationKatex": "\\frac{1}{32}\\,C_{6}H_{12}Cl_{2}O + \\frac{11}{32}\\,H_{2}O \\rightarrow \\frac{3}{16}\\,CO_{2} + \\frac{1}{16}\\,Cl^{-} + \\frac{17}{16}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "043",
+      "cas": "111-91-1",
+      "name_en": "Bis(2-chloroethoxy) methane",
+      "name_cn": "双(2-氯乙氧基)甲烷",
+      "formula": "C5H10Cl2O2",
+      "category": "Base-Neutral",
+      "subcategory": "Ether",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=111-91-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_043": "-1/24",
+          "co2": "5/24",
+          "chloride": "1/12",
+          "h2o": "-1/3",
+          "h_ion": "13/12",
+          "e_minus": "1"
+        },
+        "molecularWeight": 173.033,
+        "equationKatex": "\\frac{1}{24}\\,C_{5}H_{10}Cl_{2}O_{2} + \\frac{1}{3}\\,H_{2}O \\rightarrow \\frac{5}{24}\\,CO_{2} + \\frac{1}{12}\\,Cl^{-} + \\frac{13}{12}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "044",
+      "cas": "75-09-2",
+      "name_en": "Methylene chloride",
+      "name_cn": "二氯甲烷",
+      "formula": "CH2Cl2",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "DCM",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-09-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_044": "-1/4",
+          "co2": "1/4",
+          "chloride": "1/2",
+          "h2o": "-1/2",
+          "h_ion": "3/2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 84.927,
+        "equationKatex": "\\frac{1}{4}\\,CH_{2}Cl_{2} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{2}\\,Cl^{-} + \\frac{3}{2}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "045",
+      "cas": "74-87-3",
+      "name_en": "Methyl chloride",
+      "name_cn": "氯甲烷",
+      "formula": "CH3Cl",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "又名 chloromethane (EPA 标注笔误)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=74-87-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_045": "-1/6",
+          "co2": "1/6",
+          "chloride": "1/6",
+          "h2o": "-1/3",
+          "h_ion": "7/6",
+          "e_minus": "1"
+        },
+        "molecularWeight": 50.485,
+        "equationKatex": "\\frac{1}{6}\\,CH_{3}Cl + \\frac{1}{3}\\,H_{2}O \\rightarrow \\frac{1}{6}\\,CO_{2} + \\frac{1}{6}\\,Cl^{-} + \\frac{7}{6}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "046",
+      "cas": "74-83-9",
+      "name_en": "Methyl bromide",
+      "name_cn": "溴甲烷",
+      "formula": "CH3Br",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "bromomethane",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=74-83-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "bromide",
+          "formula": "Br^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_046": "-1/6",
+          "co2": "1/6",
+          "bromide": "1/6",
+          "h2o": "-1/3",
+          "h_ion": "7/6",
+          "e_minus": "1"
+        },
+        "molecularWeight": 94.939,
+        "equationKatex": "\\frac{1}{6}\\,CH_{3}Br + \\frac{1}{3}\\,H_{2}O \\rightarrow \\frac{1}{6}\\,CO_{2} + \\frac{1}{6}\\,Br^{-} + \\frac{7}{6}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Br": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "047",
+      "cas": "75-25-2",
+      "name_en": "Bromoform",
+      "name_cn": "三溴甲烷",
+      "formula": "CHBr3",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-25-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "bromide",
+          "formula": "Br^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_047": "-1/2",
+          "co2": "1/2",
+          "bromide": "3/2",
+          "h2o": "-1",
+          "h_ion": "5/2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 252.731,
+        "equationKatex": "\\frac{1}{2}\\,CHBr_{3} + H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + \\frac{3}{2}\\,Br^{-} + \\frac{5}{2}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Br": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "048",
+      "cas": "75-27-4",
+      "name_en": "Dichlorobromomethane",
+      "name_cn": "一溴二氯甲烷",
+      "formula": "CHBrCl2",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-27-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "bromide",
+          "formula": "Br^-"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_048": "-1/2",
+          "co2": "1/2",
+          "bromide": "1/2",
+          "chloride": "1",
+          "h2o": "-1",
+          "h_ion": "5/2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 163.823,
+        "equationKatex": "\\frac{1}{2}\\,CHBrCl_{2} + H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + \\frac{1}{2}\\,Br^{-} + Cl^{-} + \\frac{5}{2}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Br": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "051",
+      "cas": "124-48-1",
+      "name_en": "Chlorodibromomethane",
+      "name_cn": "一氯二溴甲烷",
+      "formula": "CHBr2Cl",
+      "category": "Volatile",
+      "subcategory": "Halomethane",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=124-48-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "bromide",
+          "formula": "Br^-"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_051": "-1/2",
+          "co2": "1/2",
+          "bromide": "1",
+          "chloride": "1/2",
+          "h2o": "-1",
+          "h_ion": "5/2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 208.277,
+        "equationKatex": "\\frac{1}{2}\\,CHBr_{2}Cl + H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + Br^{-} + \\frac{1}{2}\\,Cl^{-} + \\frac{5}{2}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Br": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "052",
+      "cas": "87-68-3",
+      "name_en": "Hexachlorobutadiene",
+      "name_cn": "六氯丁二烯",
+      "formula": "C4Cl6",
+      "category": "Base-Neutral",
+      "subcategory": "Chloroalkene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=87-68-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_052": "-1/10",
+          "co2": "2/5",
+          "chloride": "3/5",
+          "h2o": "-4/5",
+          "h_ion": "8/5",
+          "e_minus": "1"
+        },
+        "molecularWeight": 260.744,
+        "equationKatex": "\\frac{1}{10}\\,C_{4}Cl_{6} + \\frac{4}{5}\\,H_{2}O \\rightarrow \\frac{2}{5}\\,CO_{2} + \\frac{3}{5}\\,Cl^{-} + \\frac{8}{5}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "Cl": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "053",
+      "cas": "77-47-4",
+      "name_en": "Hexachlorocyclopentadiene",
+      "name_cn": "六氯环戊二烯",
+      "formula": "C5Cl6",
+      "category": "Base-Neutral",
+      "subcategory": "Chloroalkene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "EPA 标 \"hexachloromyclopentadiene\" 系笔误",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=77-47-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_053": "-1/14",
+          "co2": "5/14",
+          "chloride": "3/7",
+          "h2o": "-5/7",
+          "h_ion": "10/7",
+          "e_minus": "1"
+        },
+        "molecularWeight": 272.755,
+        "equationKatex": "\\frac{1}{14}\\,C_{5}Cl_{6} + \\frac{5}{7}\\,H_{2}O \\rightarrow \\frac{5}{14}\\,CO_{2} + \\frac{3}{7}\\,Cl^{-} + \\frac{10}{7}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "Cl": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "054",
+      "cas": "78-59-1",
+      "name_en": "Isophorone",
+      "name_cn": "异佛尔酮",
+      "formula": "C9H14O",
+      "category": "Base-Neutral",
+      "subcategory": "Ketone",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=78-59-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_054": "-1/48",
+          "co2": "3/16",
+          "h2o": "-17/48",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 138.20999999999998,
+        "equationKatex": "\\frac{1}{48}\\,C_{9}H_{14}O + \\frac{17}{48}\\,H_{2}O \\rightarrow \\frac{3}{16}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "055",
+      "cas": "91-20-3",
+      "name_en": "Naphthalene",
+      "name_cn": "萘",
+      "formula": "C10H8",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (2-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=91-20-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_055": "-1/48",
+          "co2": "5/24",
+          "h2o": "-5/12",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 128.17399999999998,
+        "equationKatex": "\\frac{1}{48}\\,C_{10}H_{8} + \\frac{5}{12}\\,H_{2}O \\rightarrow \\frac{5}{24}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "056",
+      "cas": "98-95-3",
+      "name_en": "Nitrobenzene",
+      "name_cn": "硝基苯",
+      "formula": "C6H5NO2",
+      "category": "Base-Neutral",
+      "subcategory": "Nitroaromatic",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=98-95-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_056": "-1/22",
+          "co2": "3/11",
+          "nh4": "1/22",
+          "h2o": "-5/11",
+          "h_ion": "21/22",
+          "e_minus": "1"
+        },
+        "molecularWeight": 123.11100000000002,
+        "equationKatex": "\\frac{1}{22}\\,C_{6}H_{5}NO_{2} + \\frac{5}{11}\\,H_{2}O \\rightarrow \\frac{3}{11}\\,CO_{2} + \\frac{1}{22}\\,NH_{4}^{+} + \\frac{21}{22}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "057",
+      "cas": "88-75-5",
+      "name_en": "2-Nitrophenol",
+      "name_cn": "2-硝基苯酚",
+      "formula": "C6H5NO3",
+      "category": "Acid-Extractable",
+      "subcategory": "Nitrophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=88-75-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_057": "-1/20",
+          "co2": "3/10",
+          "nh4": "1/20",
+          "h2o": "-9/20",
+          "h_ion": "19/20",
+          "e_minus": "1"
+        },
+        "molecularWeight": 139.11,
+        "equationKatex": "\\frac{1}{20}\\,C_{6}H_{5}NO_{3} + \\frac{9}{20}\\,H_{2}O \\rightarrow \\frac{3}{10}\\,CO_{2} + \\frac{1}{20}\\,NH_{4}^{+} + \\frac{19}{20}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "058",
+      "cas": "100-02-7",
+      "name_en": "4-Nitrophenol",
+      "name_cn": "4-硝基苯酚",
+      "formula": "C6H5NO3",
+      "category": "Acid-Extractable",
+      "subcategory": "Nitrophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=100-02-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_058": "-1/20",
+          "co2": "3/10",
+          "nh4": "1/20",
+          "h2o": "-9/20",
+          "h_ion": "19/20",
+          "e_minus": "1"
+        },
+        "molecularWeight": 139.11,
+        "equationKatex": "\\frac{1}{20}\\,C_{6}H_{5}NO_{3} + \\frac{9}{20}\\,H_{2}O \\rightarrow \\frac{3}{10}\\,CO_{2} + \\frac{1}{20}\\,NH_{4}^{+} + \\frac{19}{20}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "059",
+      "cas": "51-28-5",
+      "name_en": "2,4-Dinitrophenol",
+      "name_cn": "2,4-二硝基苯酚",
+      "formula": "C6H4N2O5",
+      "category": "Acid-Extractable",
+      "subcategory": "Nitrophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=51-28-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_059": "-1/12",
+          "co2": "1/2",
+          "nh4": "1/6",
+          "h2o": "-7/12",
+          "h_ion": "5/6",
+          "e_minus": "1"
+        },
+        "molecularWeight": 184.107,
+        "equationKatex": "\\frac{1}{12}\\,C_{6}H_{4}N_{2}O_{5} + \\frac{7}{12}\\,H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + \\frac{1}{6}\\,NH_{4}^{+} + \\frac{5}{6}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "060",
+      "cas": "534-52-1",
+      "name_en": "4,6-Dinitro-o-cresol",
+      "name_cn": "4,6-二硝基邻甲酚",
+      "formula": "C7H6N2O5",
+      "category": "Acid-Extractable",
+      "subcategory": "Nitrophenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "N→NH4+",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=534-52-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_060": "-1/18",
+          "co2": "7/18",
+          "nh4": "1/9",
+          "h2o": "-1/2",
+          "h_ion": "8/9",
+          "e_minus": "1"
+        },
+        "molecularWeight": 198.13400000000001,
+        "equationKatex": "\\frac{1}{18}\\,C_{7}H_{6}N_{2}O_{5} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{7}{18}\\,CO_{2} + \\frac{1}{9}\\,NH_{4}^{+} + \\frac{8}{9}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "061",
+      "cas": "62-75-9",
+      "name_en": "N-Nitrosodimethylamine",
+      "name_cn": "N-亚硝基二甲胺",
+      "formula": "C2H6N2O",
+      "category": "Base-Neutral",
+      "subcategory": "Nitrosamine",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "NDMA",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=62-75-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_061": "-1/6",
+          "co2": "1/3",
+          "nh4": "1/3",
+          "h2o": "-1/2",
+          "h_ion": "2/3",
+          "e_minus": "1"
+        },
+        "molecularWeight": 74.083,
+        "equationKatex": "\\frac{1}{6}\\,C_{2}H_{6}N_{2}O + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{3}\\,CO_{2} + \\frac{1}{3}\\,NH_{4}^{+} + \\frac{2}{3}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "062",
+      "cas": "86-30-6",
+      "name_en": "N-Nitrosodiphenylamine",
+      "name_cn": "N-亚硝基二苯胺",
+      "formula": "C12H10N2O",
+      "category": "Base-Neutral",
+      "subcategory": "Nitrosamine",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=86-30-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_062": "-1/50",
+          "co2": "6/25",
+          "nh4": "1/25",
+          "h2o": "-23/50",
+          "h_ion": "24/25",
+          "e_minus": "1"
+        },
+        "molecularWeight": 198.22500000000002,
+        "equationKatex": "\\frac{1}{50}\\,C_{12}H_{10}N_{2}O + \\frac{23}{50}\\,H_{2}O \\rightarrow \\frac{6}{25}\\,CO_{2} + \\frac{1}{25}\\,NH_{4}^{+} + \\frac{24}{25}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "063",
+      "cas": "621-64-7",
+      "name_en": "N-Nitrosodi-n-propylamine",
+      "name_cn": "N-亚硝基二正丙胺",
+      "formula": "C6H14N2O",
+      "category": "Base-Neutral",
+      "subcategory": "Nitrosamine",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=621-64-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_063": "-1/30",
+          "co2": "1/5",
+          "nh4": "1/15",
+          "h2o": "-11/30",
+          "h_ion": "14/15",
+          "e_minus": "1"
+        },
+        "molecularWeight": 130.191,
+        "equationKatex": "\\frac{1}{30}\\,C_{6}H_{14}N_{2}O + \\frac{11}{30}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + \\frac{1}{15}\\,NH_{4}^{+} + \\frac{14}{15}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "N": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "064",
+      "cas": "87-86-5",
+      "name_en": "Pentachlorophenol",
+      "name_cn": "五氯苯酚",
+      "formula": "C6HCl5O",
+      "category": "Acid-Extractable",
+      "subcategory": "Chlorophenol",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "PCP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=87-86-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_064": "-1/18",
+          "co2": "1/3",
+          "chloride": "5/18",
+          "h2o": "-11/18",
+          "h_ion": "23/18",
+          "e_minus": "1"
+        },
+        "molecularWeight": 266.32300000000004,
+        "equationKatex": "\\frac{1}{18}\\,C_{6}HCl_{5}O + \\frac{11}{18}\\,H_{2}O \\rightarrow \\frac{1}{3}\\,CO_{2} + \\frac{5}{18}\\,Cl^{-} + \\frac{23}{18}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "065",
+      "cas": "108-95-2",
+      "name_en": "Phenol",
+      "name_cn": "苯酚",
+      "formula": "C6H6O",
+      "category": "Acid-Extractable",
+      "subcategory": "Phenol",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=108-95-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_065": "-1/28",
+          "co2": "3/14",
+          "h2o": "-11/28",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 94.113,
+        "equationKatex": "\\frac{1}{28}\\,C_{6}H_{6}O + \\frac{11}{28}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "066",
+      "cas": "117-81-7",
+      "name_en": "Bis(2-ethylhexyl) phthalate",
+      "name_cn": "邻苯二甲酸二(2-乙基己基)酯",
+      "formula": "C24H38O4",
+      "category": "Base-Neutral",
+      "subcategory": "Phthalate",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "DEHP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=117-81-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_066": "-1/126",
+          "co2": "4/21",
+          "h2o": "-22/63",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 390.56399999999996,
+        "equationKatex": "\\frac{1}{126}\\,C_{24}H_{38}O_{4} + \\frac{22}{63}\\,H_{2}O \\rightarrow \\frac{4}{21}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "067",
+      "cas": "85-68-7",
+      "name_en": "Butyl benzyl phthalate",
+      "name_cn": "邻苯二甲酸丁苄酯",
+      "formula": "C19H20O4",
+      "category": "Base-Neutral",
+      "subcategory": "Phthalate",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "BBP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=85-68-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_067": "-1/88",
+          "co2": "19/88",
+          "h2o": "-17/44",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 312.36499999999995,
+        "equationKatex": "\\frac{1}{88}\\,C_{19}H_{20}O_{4} + \\frac{17}{44}\\,H_{2}O \\rightarrow \\frac{19}{88}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "068",
+      "cas": "84-74-2",
+      "name_en": "Di-n-butyl phthalate",
+      "name_cn": "邻苯二甲酸二正丁酯",
+      "formula": "C16H22O4",
+      "category": "Base-Neutral",
+      "subcategory": "Phthalate",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "DBP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=84-74-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_068": "-1/78",
+          "co2": "8/39",
+          "h2o": "-14/39",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 278.34799999999996,
+        "equationKatex": "\\frac{1}{78}\\,C_{16}H_{22}O_{4} + \\frac{14}{39}\\,H_{2}O \\rightarrow \\frac{8}{39}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "069",
+      "cas": "117-84-0",
+      "name_en": "Di-n-octyl phthalate",
+      "name_cn": "邻苯二甲酸二正辛酯",
+      "formula": "C24H38O4",
+      "category": "Base-Neutral",
+      "subcategory": "Phthalate",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "DnOP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=117-84-0",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_069": "-1/126",
+          "co2": "4/21",
+          "h2o": "-22/63",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 390.56399999999996,
+        "equationKatex": "\\frac{1}{126}\\,C_{24}H_{38}O_{4} + \\frac{22}{63}\\,H_{2}O \\rightarrow \\frac{4}{21}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "070",
+      "cas": "84-66-2",
+      "name_en": "Diethyl phthalate",
+      "name_cn": "邻苯二甲酸二乙酯",
+      "formula": "C12H14O4",
+      "category": "Base-Neutral",
+      "subcategory": "Phthalate",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "DEP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=84-66-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_070": "-1/54",
+          "co2": "2/9",
+          "h2o": "-10/27",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 222.24,
+        "equationKatex": "\\frac{1}{54}\\,C_{12}H_{14}O_{4} + \\frac{10}{27}\\,H_{2}O \\rightarrow \\frac{2}{9}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "071",
+      "cas": "131-11-3",
+      "name_en": "Dimethyl phthalate",
+      "name_cn": "邻苯二甲酸二甲酯",
+      "formula": "C10H10O4",
+      "category": "Base-Neutral",
+      "subcategory": "Phthalate",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "DMP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=131-11-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_071": "-1/42",
+          "co2": "5/21",
+          "h2o": "-8/21",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 194.186,
+        "equationKatex": "\\frac{1}{42}\\,C_{10}H_{10}O_{4} + \\frac{8}{21}\\,H_{2}O \\rightarrow \\frac{5}{21}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "072",
+      "cas": "56-55-3",
+      "name_en": "Benzo(a)anthracene",
+      "name_cn": "苯并(a)蒽",
+      "formula": "C18H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (4-ring); 又名 1,2-benzanthracene",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=56-55-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_072": "-1/84",
+          "co2": "3/14",
+          "h2o": "-3/7",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 228.29399999999998,
+        "equationKatex": "\\frac{1}{84}\\,C_{18}H_{12} + \\frac{3}{7}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "073",
+      "cas": "50-32-8",
+      "name_en": "Benzo(a)pyrene",
+      "name_cn": "苯并(a)芘",
+      "formula": "C20H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (5-ring); 又名 3,4-benzopyrene",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=50-32-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_073": "-1/92",
+          "co2": "5/23",
+          "h2o": "-10/23",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 252.31599999999997,
+        "equationKatex": "\\frac{1}{92}\\,C_{20}H_{12} + \\frac{10}{23}\\,H_{2}O \\rightarrow \\frac{5}{23}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "074",
+      "cas": "205-99-2",
+      "name_en": "Benzo(b)fluoranthene",
+      "name_cn": "苯并(b)荧蒽",
+      "formula": "C20H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH; 又名 3,4-benzofluoranthene",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=205-99-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_074": "-1/92",
+          "co2": "5/23",
+          "h2o": "-10/23",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 252.31599999999997,
+        "equationKatex": "\\frac{1}{92}\\,C_{20}H_{12} + \\frac{10}{23}\\,H_{2}O \\rightarrow \\frac{5}{23}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "075",
+      "cas": "207-08-9",
+      "name_en": "Benzo(k)fluoranthene",
+      "name_cn": "苯并(k)荧蒽",
+      "formula": "C20H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH; EPA 此条标注与 074 撞名, 正确名为 benzo(k)fluoranthene",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=207-08-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_075": "-1/92",
+          "co2": "5/23",
+          "h2o": "-10/23",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 252.31599999999997,
+        "equationKatex": "\\frac{1}{92}\\,C_{20}H_{12} + \\frac{10}{23}\\,H_{2}O \\rightarrow \\frac{5}{23}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "076",
+      "cas": "218-01-9",
+      "name_en": "Chrysene",
+      "name_cn": "䓛",
+      "formula": "C18H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (4-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=218-01-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_076": "-1/84",
+          "co2": "3/14",
+          "h2o": "-3/7",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 228.29399999999998,
+        "equationKatex": "\\frac{1}{84}\\,C_{18}H_{12} + \\frac{3}{7}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "077",
+      "cas": "208-96-8",
+      "name_en": "Acenaphthylene",
+      "name_cn": "苊烯",
+      "formula": "C12H8",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=208-96-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_077": "-1/56",
+          "co2": "3/14",
+          "h2o": "-3/7",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 152.196,
+        "equationKatex": "\\frac{1}{56}\\,C_{12}H_{8} + \\frac{3}{7}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "078",
+      "cas": "120-12-7",
+      "name_en": "Anthracene",
+      "name_cn": "蒽",
+      "formula": "C14H10",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (3-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=120-12-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_078": "-1/66",
+          "co2": "7/33",
+          "h2o": "-14/33",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 178.234,
+        "equationKatex": "\\frac{1}{66}\\,C_{14}H_{10} + \\frac{14}{33}\\,H_{2}O \\rightarrow \\frac{7}{33}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "079",
+      "cas": "191-24-2",
+      "name_en": "Benzo(ghi)perylene",
+      "name_cn": "苯并(ghi)苝",
+      "formula": "C22H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (6-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=191-24-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_079": "-1/100",
+          "co2": "11/50",
+          "h2o": "-11/25",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 276.33799999999997,
+        "equationKatex": "\\frac{1}{100}\\,C_{22}H_{12} + \\frac{11}{25}\\,H_{2}O \\rightarrow \\frac{11}{50}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "080",
+      "cas": "86-73-7",
+      "name_en": "Fluorene",
+      "name_cn": "芴",
+      "formula": "C13H10",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (3-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=86-73-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_080": "-1/62",
+          "co2": "13/62",
+          "h2o": "-13/31",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 166.223,
+        "equationKatex": "\\frac{1}{62}\\,C_{13}H_{10} + \\frac{13}{31}\\,H_{2}O \\rightarrow \\frac{13}{62}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "081",
+      "cas": "85-01-8",
+      "name_en": "Phenanthrene",
+      "name_cn": "菲",
+      "formula": "C14H10",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (3-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=85-01-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_081": "-1/66",
+          "co2": "7/33",
+          "h2o": "-14/33",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 178.234,
+        "equationKatex": "\\frac{1}{66}\\,C_{14}H_{10} + \\frac{14}{33}\\,H_{2}O \\rightarrow \\frac{7}{33}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "082",
+      "cas": "53-70-3",
+      "name_en": "Dibenz(a,h)anthracene",
+      "name_cn": "二苯并(a,h)蒽",
+      "formula": "C22H14",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (5-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=53-70-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_082": "-1/102",
+          "co2": "11/51",
+          "h2o": "-22/51",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 278.354,
+        "equationKatex": "\\frac{1}{102}\\,C_{22}H_{14} + \\frac{22}{51}\\,H_{2}O \\rightarrow \\frac{11}{51}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "083",
+      "cas": "193-39-5",
+      "name_en": "Indeno(1,2,3-cd)pyrene",
+      "name_cn": "茚并(1,2,3-cd)芘",
+      "formula": "C22H12",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (6-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=193-39-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_083": "-1/100",
+          "co2": "11/50",
+          "h2o": "-11/25",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 276.33799999999997,
+        "equationKatex": "\\frac{1}{100}\\,C_{22}H_{12} + \\frac{11}{25}\\,H_{2}O \\rightarrow \\frac{11}{50}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "084",
+      "cas": "129-00-0",
+      "name_en": "Pyrene",
+      "name_cn": "芘",
+      "formula": "C16H10",
+      "category": "Base-Neutral",
+      "subcategory": "PAH",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "PAH (4-ring)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=129-00-0",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_084": "-1/74",
+          "co2": "8/37",
+          "h2o": "-16/37",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 202.256,
+        "equationKatex": "\\frac{1}{74}\\,C_{16}H_{10} + \\frac{16}{37}\\,H_{2}O \\rightarrow \\frac{8}{37}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "085",
+      "cas": "127-18-4",
+      "name_en": "Tetrachloroethylene",
+      "name_cn": "四氯乙烯",
+      "formula": "C2Cl4",
+      "category": "Volatile",
+      "subcategory": "Haloalkene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "PCE; 厌氧 → TCE → DCE → VC",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=127-18-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_085": "-1/4",
+          "co2": "1/2",
+          "chloride": "1",
+          "h2o": "-1",
+          "h_ion": "2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 165.822,
+        "equationKatex": "\\frac{1}{4}\\,C_{2}Cl_{4} + H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + Cl^{-} + 2\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "Cl": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "086",
+      "cas": "108-88-3",
+      "name_en": "Toluene",
+      "name_cn": "甲苯",
+      "formula": "C7H8",
+      "category": "Volatile",
+      "subcategory": "BTEX",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "BTEX",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=108-88-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_086": "-1/36",
+          "co2": "7/36",
+          "h2o": "-7/18",
+          "h_ion": "1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 92.14099999999999,
+        "equationKatex": "\\frac{1}{36}\\,C_{7}H_{8} + \\frac{7}{18}\\,H_{2}O \\rightarrow \\frac{7}{36}\\,CO_{2} + H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "087",
+      "cas": "79-01-6",
+      "name_en": "Trichloroethylene",
+      "name_cn": "三氯乙烯",
+      "formula": "C2HCl3",
+      "category": "Volatile",
+      "subcategory": "Haloalkene",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "TCE",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=79-01-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_087": "-1/6",
+          "co2": "1/3",
+          "chloride": "1/2",
+          "h2o": "-2/3",
+          "h_ion": "3/2",
+          "e_minus": "1"
+        },
+        "molecularWeight": 131.38,
+        "equationKatex": "\\frac{1}{6}\\,C_{2}HCl_{3} + \\frac{2}{3}\\,H_{2}O \\rightarrow \\frac{1}{3}\\,CO_{2} + \\frac{1}{2}\\,Cl^{-} + \\frac{3}{2}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "088",
+      "cas": "75-01-4",
+      "name_en": "Vinyl chloride",
+      "name_cn": "氯乙烯",
+      "formula": "C2H3Cl",
+      "category": "Volatile",
+      "subcategory": "Haloalkene",
+      "role": "donor",
+      "product_logic": "full_mineralization",
+      "notes": "VC; 致癌",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=75-01-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_088": "-1/10",
+          "co2": "1/5",
+          "chloride": "1/10",
+          "h2o": "-2/5",
+          "h_ion": "11/10",
+          "e_minus": "1"
+        },
+        "molecularWeight": 62.496,
+        "equationKatex": "\\frac{1}{10}\\,C_{2}H_{3}Cl + \\frac{2}{5}\\,H_{2}O \\rightarrow \\frac{1}{5}\\,CO_{2} + \\frac{1}{10}\\,Cl^{-} + \\frac{11}{10}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "089",
+      "cas": "309-00-2",
+      "name_en": "Aldrin",
+      "name_cn": "艾氏剂",
+      "formula": "C12H8Cl6",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=309-00-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_089": "-1/50",
+          "co2": "6/25",
+          "chloride": "3/25",
+          "h2o": "-12/25",
+          "h_ion": "28/25",
+          "e_minus": "1"
+        },
+        "molecularWeight": 364.896,
+        "equationKatex": "\\frac{1}{50}\\,C_{12}H_{8}Cl_{6} + \\frac{12}{25}\\,H_{2}O \\rightarrow \\frac{6}{25}\\,CO_{2} + \\frac{3}{25}\\,Cl^{-} + \\frac{28}{25}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "090",
+      "cas": "60-57-1",
+      "name_en": "Dieldrin",
+      "name_cn": "狄氏剂",
+      "formula": "C12H8Cl6O",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=60-57-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_090": "-1/48",
+          "co2": "1/4",
+          "chloride": "1/8",
+          "h2o": "-23/48",
+          "h_ion": "9/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 380.89500000000004,
+        "equationKatex": "\\frac{1}{48}\\,C_{12}H_{8}Cl_{6}O + \\frac{23}{48}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{8}\\,Cl^{-} + \\frac{9}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "091",
+      "cas": "57-74-9",
+      "name_en": "Chlordane",
+      "name_cn": "氯丹",
+      "formula": "C10H6Cl8",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "POP; 工业混合物",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=57-74-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_091": "-1/38",
+          "co2": "5/19",
+          "chloride": "4/19",
+          "h2o": "-10/19",
+          "h_ion": "23/19",
+          "e_minus": "1"
+        },
+        "molecularWeight": 409.75800000000004,
+        "equationKatex": "\\frac{1}{38}\\,C_{10}H_{6}Cl_{8} + \\frac{10}{19}\\,H_{2}O \\rightarrow \\frac{5}{19}\\,CO_{2} + \\frac{4}{19}\\,Cl^{-} + \\frac{23}{19}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "092",
+      "cas": "50-29-3",
+      "name_en": "4,4'-DDT",
+      "name_cn": "滴滴涕",
+      "formula": "C14H9Cl5",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=50-29-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_092": "-1/60",
+          "co2": "7/30",
+          "chloride": "1/12",
+          "h2o": "-7/15",
+          "h_ion": "13/12",
+          "e_minus": "1"
+        },
+        "molecularWeight": 354.476,
+        "equationKatex": "\\frac{1}{60}\\,C_{14}H_{9}Cl_{5} + \\frac{7}{15}\\,H_{2}O \\rightarrow \\frac{7}{30}\\,CO_{2} + \\frac{1}{12}\\,Cl^{-} + \\frac{13}{12}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "093",
+      "cas": "72-55-9",
+      "name_en": "4,4'-DDE",
+      "name_cn": "DDE",
+      "formula": "C14H8Cl4",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "DDT 代谢物",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=72-55-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_093": "-1/60",
+          "co2": "7/30",
+          "chloride": "1/15",
+          "h2o": "-7/15",
+          "h_ion": "16/15",
+          "e_minus": "1"
+        },
+        "molecularWeight": 318.01800000000003,
+        "equationKatex": "\\frac{1}{60}\\,C_{14}H_{8}Cl_{4} + \\frac{7}{15}\\,H_{2}O \\rightarrow \\frac{7}{30}\\,CO_{2} + \\frac{1}{15}\\,Cl^{-} + \\frac{16}{15}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "094",
+      "cas": "72-54-8",
+      "name_en": "4,4'-DDD",
+      "name_cn": "DDD",
+      "formula": "C14H10Cl4",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "DDT 代谢物",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=72-54-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_094": "-1/62",
+          "co2": "7/31",
+          "chloride": "2/31",
+          "h2o": "-14/31",
+          "h_ion": "33/31",
+          "e_minus": "1"
+        },
+        "molecularWeight": 320.034,
+        "equationKatex": "\\frac{1}{62}\\,C_{14}H_{10}Cl_{4} + \\frac{14}{31}\\,H_{2}O \\rightarrow \\frac{7}{31}\\,CO_{2} + \\frac{2}{31}\\,Cl^{-} + \\frac{33}{31}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "095",
+      "cas": "959-98-8",
+      "name_en": "alpha-Endosulfan",
+      "name_cn": "α-硫丹",
+      "formula": "C9H6Cl6O3S",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=959-98-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        },
+        {
+          "id": "sulfate",
+          "formula": "SO4^2-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_095": "-1/36",
+          "co2": "1/4",
+          "chloride": "1/6",
+          "sulfate": "1/36",
+          "h2o": "-19/36",
+          "h_ion": "11/9",
+          "e_minus": "1"
+        },
+        "molecularWeight": 406.904,
+        "equationKatex": "\\frac{1}{36}\\,C_{9}H_{6}Cl_{6}O_{3}S + \\frac{19}{36}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{6}\\,Cl^{-} + \\frac{1}{36}\\,SO_{4}^{2-} + \\frac{11}{9}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "S": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "096",
+      "cas": "33213-65-9",
+      "name_en": "beta-Endosulfan",
+      "name_cn": "β-硫丹",
+      "formula": "C9H6Cl6O3S",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=33213-65-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        },
+        {
+          "id": "sulfate",
+          "formula": "SO4^2-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_096": "-1/36",
+          "co2": "1/4",
+          "chloride": "1/6",
+          "sulfate": "1/36",
+          "h2o": "-19/36",
+          "h_ion": "11/9",
+          "e_minus": "1"
+        },
+        "molecularWeight": 406.904,
+        "equationKatex": "\\frac{1}{36}\\,C_{9}H_{6}Cl_{6}O_{3}S + \\frac{19}{36}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{6}\\,Cl^{-} + \\frac{1}{36}\\,SO_{4}^{2-} + \\frac{11}{9}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "S": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "097",
+      "cas": "1031-07-8",
+      "name_en": "Endosulfan sulfate",
+      "name_cn": "硫丹硫酸盐",
+      "formula": "C9H6Cl6O4S",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=1031-07-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        },
+        {
+          "id": "sulfate",
+          "formula": "SO4^2-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_097": "-1/34",
+          "co2": "9/34",
+          "chloride": "3/17",
+          "sulfate": "1/34",
+          "h2o": "-9/17",
+          "h_ion": "21/17",
+          "e_minus": "1"
+        },
+        "molecularWeight": 422.90299999999996,
+        "equationKatex": "\\frac{1}{34}\\,C_{9}H_{6}Cl_{6}O_{4}S + \\frac{9}{17}\\,H_{2}O \\rightarrow \\frac{9}{34}\\,CO_{2} + \\frac{3}{17}\\,Cl^{-} + \\frac{1}{34}\\,SO_{4}^{2-} + \\frac{21}{17}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "S": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "098",
+      "cas": "72-20-8",
+      "name_en": "Endrin",
+      "name_cn": "异狄氏剂",
+      "formula": "C12H8Cl6O",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=72-20-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_098": "-1/48",
+          "co2": "1/4",
+          "chloride": "1/8",
+          "h2o": "-23/48",
+          "h_ion": "9/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 380.89500000000004,
+        "equationKatex": "\\frac{1}{48}\\,C_{12}H_{8}Cl_{6}O + \\frac{23}{48}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{8}\\,Cl^{-} + \\frac{9}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "099",
+      "cas": "7421-93-4",
+      "name_en": "Endrin aldehyde",
+      "name_cn": "异狄氏剂醛",
+      "formula": "C12H8Cl6O",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7421-93-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_099": "-1/48",
+          "co2": "1/4",
+          "chloride": "1/8",
+          "h2o": "-23/48",
+          "h_ion": "9/8",
+          "e_minus": "1"
+        },
+        "molecularWeight": 380.89500000000004,
+        "equationKatex": "\\frac{1}{48}\\,C_{12}H_{8}Cl_{6}O + \\frac{23}{48}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{8}\\,Cl^{-} + \\frac{9}{8}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "100",
+      "cas": "76-44-8",
+      "name_en": "Heptachlor",
+      "name_cn": "七氯",
+      "formula": "C10H5Cl7",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=76-44-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_100": "-1/38",
+          "co2": "5/19",
+          "chloride": "7/38",
+          "h2o": "-10/19",
+          "h_ion": "45/38",
+          "e_minus": "1"
+        },
+        "molecularWeight": 373.3,
+        "equationKatex": "\\frac{1}{38}\\,C_{10}H_{5}Cl_{7} + \\frac{10}{19}\\,H_{2}O \\rightarrow \\frac{5}{19}\\,CO_{2} + \\frac{7}{38}\\,Cl^{-} + \\frac{45}{38}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "101",
+      "cas": "1024-57-3",
+      "name_en": "Heptachlor epoxide",
+      "name_cn": "七氯环氧化物",
+      "formula": "C10H5Cl7O",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=1024-57-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_101": "-1/36",
+          "co2": "5/18",
+          "chloride": "7/36",
+          "h2o": "-19/36",
+          "h_ion": "43/36",
+          "e_minus": "1"
+        },
+        "molecularWeight": 389.29900000000004,
+        "equationKatex": "\\frac{1}{36}\\,C_{10}H_{5}Cl_{7}O + \\frac{19}{36}\\,H_{2}O \\rightarrow \\frac{5}{18}\\,CO_{2} + \\frac{7}{36}\\,Cl^{-} + \\frac{43}{36}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "102",
+      "cas": "319-84-6",
+      "name_en": "alpha-BHC",
+      "name_cn": "α-六六六",
+      "formula": "C6H6Cl6",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "α-HCH",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=319-84-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_102": "-1/24",
+          "co2": "1/4",
+          "chloride": "1/4",
+          "h2o": "-1/2",
+          "h_ion": "5/4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 290.814,
+        "equationKatex": "\\frac{1}{24}\\,C_{6}H_{6}Cl_{6} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{4}\\,Cl^{-} + \\frac{5}{4}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "103",
+      "cas": "319-85-7",
+      "name_en": "beta-BHC",
+      "name_cn": "β-六六六",
+      "formula": "C6H6Cl6",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "β-HCH",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=319-85-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_103": "-1/24",
+          "co2": "1/4",
+          "chloride": "1/4",
+          "h2o": "-1/2",
+          "h_ion": "5/4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 290.814,
+        "equationKatex": "\\frac{1}{24}\\,C_{6}H_{6}Cl_{6} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{4}\\,Cl^{-} + \\frac{5}{4}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "104",
+      "cas": "58-89-9",
+      "name_en": "gamma-BHC",
+      "name_cn": "林丹 (γ-六六六)",
+      "formula": "C6H6Cl6",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "Lindane",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=58-89-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_104": "-1/24",
+          "co2": "1/4",
+          "chloride": "1/4",
+          "h2o": "-1/2",
+          "h_ion": "5/4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 290.814,
+        "equationKatex": "\\frac{1}{24}\\,C_{6}H_{6}Cl_{6} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{4}\\,Cl^{-} + \\frac{5}{4}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "105",
+      "cas": "319-86-8",
+      "name_en": "delta-BHC",
+      "name_cn": "δ-六六六",
+      "formula": "C6H6Cl6",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "δ-HCH",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=319-86-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_105": "-1/24",
+          "co2": "1/4",
+          "chloride": "1/4",
+          "h2o": "-1/2",
+          "h_ion": "5/4",
+          "e_minus": "1"
+        },
+        "molecularWeight": 290.814,
+        "equationKatex": "\\frac{1}{24}\\,C_{6}H_{6}Cl_{6} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{1}{4}\\,Cl^{-} + \\frac{5}{4}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "106",
+      "cas": "53469-21-9",
+      "name_en": "PCB-1242 (Aroclor 1242)",
+      "name_cn": "阿罗克洛 1242",
+      "formula": "C12H7Cl3",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; PCB 混合物 42% Cl",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=53469-21-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_106": "-1/52",
+          "co2": "3/13",
+          "chloride": "3/52",
+          "h2o": "-6/13",
+          "h_ion": "55/52",
+          "e_minus": "1"
+        },
+        "molecularWeight": 257.538,
+        "equationKatex": "\\frac{1}{52}\\,C_{12}H_{7}Cl_{3} + \\frac{6}{13}\\,H_{2}O \\rightarrow \\frac{3}{13}\\,CO_{2} + \\frac{3}{52}\\,Cl^{-} + \\frac{55}{52}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "107",
+      "cas": "11097-69-1",
+      "name_en": "PCB-1254 (Aroclor 1254)",
+      "name_cn": "阿罗克洛 1254",
+      "formula": "C12H5Cl5",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; 54% Cl",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=11097-69-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_107": "-1/48",
+          "co2": "1/4",
+          "chloride": "5/48",
+          "h2o": "-1/2",
+          "h_ion": "53/48",
+          "e_minus": "1"
+        },
+        "molecularWeight": 326.422,
+        "equationKatex": "\\frac{1}{48}\\,C_{12}H_{5}Cl_{5} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{1}{4}\\,CO_{2} + \\frac{5}{48}\\,Cl^{-} + \\frac{53}{48}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "108",
+      "cas": "11104-28-2",
+      "name_en": "PCB-1221 (Aroclor 1221)",
+      "name_cn": "阿罗克洛 1221",
+      "formula": "C12H9Cl",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; 21% Cl",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=11104-28-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_108": "-1/56",
+          "co2": "3/14",
+          "chloride": "1/56",
+          "h2o": "-3/7",
+          "h_ion": "57/56",
+          "e_minus": "1"
+        },
+        "molecularWeight": 188.654,
+        "equationKatex": "\\frac{1}{56}\\,C_{12}H_{9}Cl + \\frac{3}{7}\\,H_{2}O \\rightarrow \\frac{3}{14}\\,CO_{2} + \\frac{1}{56}\\,Cl^{-} + \\frac{57}{56}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "109",
+      "cas": "11141-16-5",
+      "name_en": "PCB-1232 (Aroclor 1232)",
+      "name_cn": "阿罗克洛 1232",
+      "formula": "C12H8Cl2",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; 32% Cl",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=11141-16-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_109": "-1/54",
+          "co2": "2/9",
+          "chloride": "1/27",
+          "h2o": "-4/9",
+          "h_ion": "28/27",
+          "e_minus": "1"
+        },
+        "molecularWeight": 223.096,
+        "equationKatex": "\\frac{1}{54}\\,C_{12}H_{8}Cl_{2} + \\frac{4}{9}\\,H_{2}O \\rightarrow \\frac{2}{9}\\,CO_{2} + \\frac{1}{27}\\,Cl^{-} + \\frac{28}{27}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "110",
+      "cas": "12672-29-6",
+      "name_en": "PCB-1248 (Aroclor 1248)",
+      "name_cn": "阿罗克洛 1248",
+      "formula": "C12H6Cl4",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; 48% Cl",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=12672-29-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_110": "-1/50",
+          "co2": "6/25",
+          "chloride": "2/25",
+          "h2o": "-12/25",
+          "h_ion": "27/25",
+          "e_minus": "1"
+        },
+        "molecularWeight": 291.98,
+        "equationKatex": "\\frac{1}{50}\\,C_{12}H_{6}Cl_{4} + \\frac{12}{25}\\,H_{2}O \\rightarrow \\frac{6}{25}\\,CO_{2} + \\frac{2}{25}\\,Cl^{-} + \\frac{27}{25}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "111",
+      "cas": "11096-82-5",
+      "name_en": "PCB-1260 (Aroclor 1260)",
+      "name_cn": "阿罗克洛 1260",
+      "formula": "C12H4Cl6",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; 60% Cl",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=11096-82-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_111": "-1/46",
+          "co2": "6/23",
+          "chloride": "3/23",
+          "h2o": "-12/23",
+          "h_ion": "26/23",
+          "e_minus": "1"
+        },
+        "molecularWeight": 360.86400000000003,
+        "equationKatex": "\\frac{1}{46}\\,C_{12}H_{4}Cl_{6} + \\frac{12}{23}\\,H_{2}O \\rightarrow \\frac{6}{23}\\,CO_{2} + \\frac{3}{23}\\,Cl^{-} + \\frac{26}{23}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "112",
+      "cas": "12674-11-2",
+      "name_en": "PCB-1016 (Aroclor 1016)",
+      "name_cn": "阿罗克洛 1016",
+      "formula": "C12H7Cl3",
+      "category": "Pesticide",
+      "subcategory": "PCB",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; 16% Cl 三氯联苯主体",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=12674-11-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_112": "-1/52",
+          "co2": "3/13",
+          "chloride": "3/52",
+          "h2o": "-6/13",
+          "h_ion": "55/52",
+          "e_minus": "1"
+        },
+        "molecularWeight": 257.538,
+        "equationKatex": "\\frac{1}{52}\\,C_{12}H_{7}Cl_{3} + \\frac{6}{13}\\,H_{2}O \\rightarrow \\frac{3}{13}\\,CO_{2} + \\frac{3}{52}\\,Cl^{-} + \\frac{55}{52}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "113",
+      "cas": "8001-35-2",
+      "name_en": "Toxaphene",
+      "name_cn": "毒杀芬",
+      "formula": "C10H10Cl8",
+      "category": "Pesticide",
+      "subcategory": "OCP",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "平均式; POP; 工业混合物",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=8001-35-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_113": "-1/42",
+          "co2": "5/21",
+          "chloride": "4/21",
+          "h2o": "-10/21",
+          "h_ion": "25/21",
+          "e_minus": "1"
+        },
+        "molecularWeight": 413.79,
+        "equationKatex": "\\frac{1}{42}\\,C_{10}H_{10}Cl_{8} + \\frac{10}{21}\\,H_{2}O \\rightarrow \\frac{5}{21}\\,CO_{2} + \\frac{4}{21}\\,Cl^{-} + \\frac{25}{21}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "114",
+      "cas": "7440-36-0",
+      "name_en": "Antimony",
+      "name_cn": "锑",
+      "formula": "Sb",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "生物毒性, 半反应法不适用",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-36-0",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "115",
+      "cas": "7440-38-2",
+      "name_en": "Arsenic",
+      "name_cn": "砷",
+      "formula": "As",
+      "category": "Metal",
+      "subcategory": "Variable-valence",
+      "role": "acceptor_metal",
+      "product_logic": "redox_only",
+      "notes": "As(V)→As(III); 砷还原菌",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-38-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "arsenite",
+          "formula": "HAsO2"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "arsenate": "-1/2",
+          "arsenite": "1/2",
+          "h2o": "1",
+          "h_ion": "-3/2",
+          "e_minus": "-1"
+        },
+        "molecularWeight": 140.934,
+        "equationKatex": "\\frac{1}{2}\\,H_{2}AsO_{4}^{-} + \\frac{3}{2}\\,H^{+} + e^{-} \\rightarrow \\frac{1}{2}\\,HAsO_{2} + H_{2}O",
+        "balance_residuals": {
+          "H": "0",
+          "As": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "116",
+      "cas": "1332-21-4",
+      "name_en": "Asbestos",
+      "name_cn": "石棉",
+      "formula": "(SiO3)",
+      "category": "Mineral",
+      "subcategory": "Silicate",
+      "role": "excluded",
+      "product_logic": "excluded",
+      "notes": "硅酸盐矿物纤维; 非分子化合物",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=1332-21-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "117",
+      "cas": "7440-41-7",
+      "name_en": "Beryllium",
+      "name_cn": "铍",
+      "formula": "Be",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-41-7",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "118",
+      "cas": "7440-43-9",
+      "name_en": "Cadmium",
+      "name_cn": "镉",
+      "formula": "Cd",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-43-9",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "119",
+      "cas": "7440-47-3",
+      "name_en": "Chromium",
+      "name_cn": "铬",
+      "formula": "Cr",
+      "category": "Metal",
+      "subcategory": "Variable-valence",
+      "role": "acceptor_metal",
+      "product_logic": "redox_only",
+      "notes": "Cr(VI)→Cr(III); 微生物可还原",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-47-3",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "chromium_iii",
+          "formula": "Cr^3+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "chromate": "-1/3",
+          "chromium_iii": "1/3",
+          "h2o": "4/3",
+          "h_ion": "-8/3",
+          "e_minus": "-1"
+        },
+        "molecularWeight": 115.992,
+        "equationKatex": "\\frac{1}{3}\\,CrO_{4}^{2-} + \\frac{8}{3}\\,H^{+} + e^{-} \\rightarrow \\frac{1}{3}\\,Cr^{3+} + \\frac{4}{3}\\,H_{2}O",
+        "balance_residuals": {
+          "Cr": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "120",
+      "cas": "7440-50-8",
+      "name_en": "Copper",
+      "name_cn": "铜",
+      "formula": "Cu",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "生物可吸附但不可降解",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-50-8",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "121",
+      "cas": "57-12-5",
+      "name_en": "Cyanide",
+      "name_cn": "氰化物",
+      "formula": "CN^-",
+      "category": "Inorganic",
+      "subcategory": "Pseudohalide",
+      "role": "donor",
+      "product_logic": "cn_oxidation",
+      "notes": "阴离子形态; C(+II)→CO₂(+IV); 每 mol CN⁻ 释放 2 e⁻",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=57-12-5",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "nh4",
+          "formula": "NH4^+"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_121": "-1/2",
+          "co2": "1/2",
+          "nh4": "1/2",
+          "h2o": "-1",
+          "e_minus": "1"
+        },
+        "molecularWeight": 26.018,
+        "equationKatex": "\\frac{1}{2}\\,CN^{-} + H_{2}O \\rightarrow \\frac{1}{2}\\,CO_{2} + \\frac{1}{2}\\,NH_{4}^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "N": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "122",
+      "cas": "7439-92-1",
+      "name_en": "Lead",
+      "name_cn": "铅",
+      "formula": "Pb",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7439-92-1",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "123",
+      "cas": "7439-97-6",
+      "name_en": "Mercury",
+      "name_cn": "汞",
+      "formula": "Hg",
+      "category": "Metal",
+      "subcategory": "Variable-valence",
+      "role": "acceptor_metal",
+      "product_logic": "redox_only",
+      "notes": "Hg(II)→Hg(0); mer 操纵子",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7439-97-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "mercury_0",
+          "formula": "Hg"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "mercury_ii": "-1/2",
+          "mercury_0": "1/2",
+          "e_minus": "-1"
+        },
+        "molecularWeight": 200.592,
+        "equationKatex": "\\frac{1}{2}\\,Hg^{2+} + e^{-} \\rightarrow \\frac{1}{2}\\,Hg",
+        "balance_residuals": {
+          "Hg": "0",
+          "H": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "124",
+      "cas": "7440-02-0",
+      "name_en": "Nickel",
+      "name_cn": "镍",
+      "formula": "Ni",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-02-0",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "125",
+      "cas": "7782-49-2",
+      "name_en": "Selenium",
+      "name_cn": "硒",
+      "formula": "Se",
+      "category": "Metal",
+      "subcategory": "Variable-valence",
+      "role": "acceptor_metal",
+      "product_logic": "redox_only",
+      "notes": "Se(VI)→Se(IV)→Se(0)",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7782-49-2",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "selenium_0",
+          "formula": "Se"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "selenate": "-1/6",
+          "selenium_0": "1/6",
+          "h2o": "2/3",
+          "h_ion": "-4/3",
+          "e_minus": "-1"
+        },
+        "molecularWeight": 142.967,
+        "equationKatex": "\\frac{1}{6}\\,SeO_{4}^{2-} + \\frac{4}{3}\\,H^{+} + e^{-} \\rightarrow \\frac{1}{6}\\,Se + \\frac{2}{3}\\,H_{2}O",
+        "balance_residuals": {
+          "Se": "0",
+          "O": "0",
+          "H": "0",
+          "charge": "0"
+        }
+      }
+    },
+    {
+      "epa_id": "126",
+      "cas": "7440-22-4",
+      "name_en": "Silver",
+      "name_cn": "银",
+      "formula": "Ag",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-22-4",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "127",
+      "cas": "7440-28-0",
+      "name_en": "Thallium",
+      "name_cn": "铊",
+      "formula": "Tl",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-28-0",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "128",
+      "cas": "7440-66-6",
+      "name_en": "Zinc",
+      "name_cn": "锌",
+      "formula": "Zn",
+      "category": "Metal",
+      "subcategory": "Non-redox",
+      "role": "non_redox",
+      "product_logic": "excluded",
+      "notes": "",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=7440-66-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    },
+    {
+      "epa_id": "129",
+      "cas": "1746-01-6",
+      "name_en": "2,3,7,8-TCDD",
+      "name_cn": "2,3,7,8-四氯二苯并对二噁英",
+      "formula": "C12H4Cl4O2",
+      "category": "Dioxin",
+      "subcategory": "Dioxin",
+      "role": "donor",
+      "product_logic": "partial_dechlorination",
+      "notes": "最毒人造化合物之一; POP",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/#query=1746-01-6",
+      "ecfr_url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "products": [
+        {
+          "id": "co2",
+          "formula": "CO2"
+        },
+        {
+          "id": "chloride",
+          "formula": "Cl^-"
+        }
+      ],
+      "balance": {
+        "coefficients": {
+          "epa_129": "-1/44",
+          "co2": "3/11",
+          "chloride": "1/11",
+          "h2o": "-1/2",
+          "h_ion": "12/11",
+          "e_minus": "1"
+        },
+        "molecularWeight": 321.96200000000005,
+        "equationKatex": "\\frac{1}{44}\\,C_{12}H_{4}Cl_{4}O_{2} + \\frac{1}{2}\\,H_{2}O \\rightarrow \\frac{3}{11}\\,CO_{2} + \\frac{1}{11}\\,Cl^{-} + \\frac{12}{11}\\,H^{+} + e^{-}",
+        "balance_residuals": {
+          "C": "0",
+          "H": "0",
+          "Cl": "0",
+          "O": "0",
+          "charge": "0"
+        }
+      }
+    }
+  ]
+}
