@@ -1,7 +1,9 @@
 import type { SpeciesId } from "../types";
 
-/** Grams per mol (for mass balance / charts). */
-export const MOLECULAR_WEIGHTS: Record<SpeciesId, number> = {
+/** Grams per mol.  Curated 13 物种保留显式条目;
+ *  EPA 126 条扩展物种在 lib/data/epaRegistry.ts 模块加载时通过 registerSpecies() 注入。
+ */
+export const MOLECULAR_WEIGHTS: Record<string, number> = {
   e_minus: 0,
   h_ion: 1.008,
   h2o: 18.015,
@@ -28,7 +30,7 @@ export const MOLECULAR_WEIGHTS: Record<SpeciesId, number> = {
 };
 
 /** KaTeX fragment for rendering in equations (not including stoichiometric prefix). */
-export const SPECIES_DISPLAY_TEX: Record<SpeciesId, string> = {
+export const SPECIES_DISPLAY_TEX: Record<string, string> = {
   e_minus: String.raw`\mathrm{e^-}`,
   h_ion: String.raw`\mathrm{H^+}`,
   h2o: String.raw`\mathrm{H_2O}`,
@@ -54,31 +56,52 @@ export const SPECIES_DISPLAY_TEX: Record<SpeciesId, string> = {
   manganous: String.raw`\mathrm{Mn^{2+}}`,
 };
 
+/** Plain-text (Chinese) display name. */
+const DISPLAY_NAMES: Record<string, string> = {
+  e_minus: "e⁻",
+  h_ion: "H⁺",
+  h2o: "H₂O",
+  co2: "CO₂",
+  hco3: "HCO₃⁻",
+  nh4: "NH₄⁺",
+  biomass: "细胞 (C₅H₇O₂N)",
+  glucose: "葡萄糖",
+  acetate: "乙酸根",
+  benzene: "苯",
+  toluene: "甲苯",
+  ethanol: "乙醇",
+  hydrogen: "H₂",
+  oxygen: "O₂",
+  nitrate: "NO₃⁻",
+  sulfate: "SO₄²⁻",
+  hs: "HS⁻",
+  methane: "CH₄",
+  n2: "N₂",
+  ferric: "Fe³⁺",
+  ferrous: "Fe²⁺",
+  manganite: "MnO₂",
+  manganous: "Mn²⁺",
+};
+
 export function speciesDisplayName(id: SpeciesId): string {
-  const plain: Record<SpeciesId, string> = {
-    e_minus: "e⁻",
-    h_ion: "H⁺",
-    h2o: "H₂O",
-    co2: "CO₂",
-    hco3: "HCO₃⁻",
-    nh4: "NH₄⁺",
-    biomass: "细胞 (C₅H₇O₂N)",
-    glucose: "葡萄糖",
-    acetate: "乙酸根",
-    benzene: "苯",
-    toluene: "甲苯",
-    ethanol: "乙醇",
-    hydrogen: "H₂",
-    oxygen: "O₂",
-    nitrate: "NO₃⁻",
-    sulfate: "SO₄²⁻",
-    hs: "HS⁻",
-    methane: "CH₄",
-    n2: "N₂",
-    ferric: "Fe³⁺",
-    ferrous: "Fe²⁺",
-    manganite: "MnO₂",
-    manganous: "Mn²⁺",
-  };
-  return plain[id];
+  return DISPLAY_NAMES[id] ?? id;
+}
+
+/**
+ * 运行时注册物种(给 EPA 126 条 + 配平产物用)。
+ * 三张表同时更新; 已存在的 key 不覆盖以保证 curated 数据优先。
+ */
+export function registerSpecies(
+  id: string,
+  data: { mw?: number; tex?: string; displayName?: string },
+): void {
+  if (data.mw !== undefined && MOLECULAR_WEIGHTS[id] === undefined) {
+    MOLECULAR_WEIGHTS[id] = data.mw;
+  }
+  if (data.tex !== undefined && SPECIES_DISPLAY_TEX[id] === undefined) {
+    SPECIES_DISPLAY_TEX[id] = data.tex;
+  }
+  if (data.displayName !== undefined && DISPLAY_NAMES[id] === undefined) {
+    DISPLAY_NAMES[id] = data.displayName;
+  }
 }

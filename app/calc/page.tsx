@@ -18,7 +18,9 @@ import {
   ACCEPTOR_IDS,
   DONOR_IDS,
   type AcceptorId,
+  type AcceptorKey,
   type DonorId,
+  type DonorKey,
 } from "@/lib/types";
 
 function CalcPageInner() {
@@ -38,8 +40,8 @@ function CalcPageInner() {
     return Number.isFinite(n) ? Math.min(1, Math.max(0, n)) : 0.6;
   })();
 
-  const [donorId, setDonorId] = useState<DonorId>(initialDonor);
-  const [acceptorId, setAcceptorId] = useState<AcceptorId>(initialAcceptor);
+  const [donorId, setDonorId] = useState<DonorKey>(initialDonor);
+  const [acceptorId, setAcceptorId] = useState<AcceptorKey>(initialAcceptor);
   const [fs, setFs] = useState(initialFs);
 
   // Reflect state into URL (shallow update; no re-render storm)

@@ -3,25 +3,49 @@ import Fraction from "fraction.js";
 import { ACCEPTORS } from "./data/acceptors";
 import { CELL_SYNTHESIS } from "./data/cellSynthesis";
 import { DONORS } from "./data/donors";
+import { getEpaEntry, isEpaDonorId } from "./data/epaAdapter";
 import { combineReactions } from "./core/combineReactions";
 import { formatEquation } from "./core/formatEquation";
 import { buildKpis } from "./core/kpis";
 import { buildMassBalanceRows, buildProductBarData } from "./core/massBalance";
 import { normalizeToOneMolDonor } from "./core/normalize";
 import { buildSankeyData } from "./core/sankey";
-import type { CalculatorInput, CalculatorResult } from "./types";
+import type { CalculatorInput, CalculatorResult, HalfReactionEntry } from "./types";
 
 function clampFs(fs: number): number {
   if (Number.isNaN(fs)) return 0;
   return Math.min(1, Math.max(0, fs));
 }
 
+/** 统一查找: 优先 curated 13 条库, 找不到再查 EPA 126 条库 */
+function lookupDonor(id: string): HalfReactionEntry {
+  if (isEpaDonorId(id)) {
+    const e = getEpaEntry(id);
+    if (e) return e;
+    throw new Error(`Unknown EPA donor: ${id}`);
+  }
+  const e = DONORS[id as keyof typeof DONORS];
+  if (e) return e;
+  throw new Error(`Unknown donor: ${id}`);
+}
+
+function lookupAcceptor(id: string): HalfReactionEntry {
+  if (isEpaDonorId(id)) {
+    const e = getEpaEntry(id);
+    if (e) return e;
+    throw new Error(`Unknown EPA acceptor: ${id}`);
+  }
+  const e = ACCEPTORS[id as keyof typeof ACCEPTORS];
+  if (e) return e;
+  throw new Error(`Unknown acceptor: ${id}`);
+}
+
 export function calculate(input: CalculatorInput): CalculatorResult {
   const fs = clampFs(input.fs);
   const fe = 1 - fs;
 
-  const donorEntry = DONORS[input.donorId];
-  const acceptorEntry = ACCEPTORS[input.acceptorId];
+  const donorEntry = lookupDonor(input.donorId);
+  const acceptorEntry = lookupAcceptor(input.acceptorId);
 
   const combinedRaw = combineReactions(
     donorEntry.coefficients,

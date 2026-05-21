@@ -1,7 +1,6 @@
-import type { AcceptorId, CoefficientTable, DonorId, SpeciesId } from "../types";
+import type { AcceptorKey, CoefficientTable, DonorKey, SpeciesId } from "../types";
 
-import { ACCEPTORS } from "../data/acceptors";
-import { DONORS } from "../data/donors";
+import { lookupAcceptor, lookupDonor } from "../data/lookup";
 import { MOLECULAR_WEIGHTS, speciesDisplayName } from "../data/molecularWeights";
 
 export type KpiBundle = {
@@ -29,8 +28,8 @@ export type KpiBundle = {
 };
 
 /** 从供体半反应里读出供体主体物种系数（每 mol e⁻ 基准，负数），取倒数得电子当量。 */
-function electronsFromDonor(donorId: DonorId): number {
-  const entry = DONORS[donorId];
+function electronsFromDonor(donorId: DonorKey): number {
+  const entry = lookupDonor(donorId);
   const raw = entry.coefficients[entry.primarySpecies];
   if (!raw) throw new Error(`donor ${donorId} missing primarySpecies coeff`);
   const [n, d] = raw.includes("/") ? raw.split("/") : [raw, "1"];
@@ -49,13 +48,13 @@ function molOf(table: CoefficientTable, sp: SpeciesId): number {
 
 export function buildKpis(
   normalized: CoefficientTable,
-  donorId: DonorId,
-  acceptorId: AcceptorId,
+  donorId: DonorKey,
+  acceptorId: AcceptorKey,
   fs: number,
 ): KpiBundle {
   const electrons = electronsFromDonor(donorId);
-  const donorEntry = DONORS[donorId];
-  const acceptorEntry = ACCEPTORS[acceptorId];
+  const donorEntry = lookupDonor(donorId);
+  const acceptorEntry = lookupAcceptor(acceptorId);
 
   const donorMW = MOLECULAR_WEIGHTS[donorEntry.primarySpecies];
 

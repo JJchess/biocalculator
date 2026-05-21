@@ -5,11 +5,14 @@ import NumberFlow from "@number-flow/react";
 import { Slider } from "@/components/ui/slider";
 import { ACCEPTORS } from "@/lib/data/acceptors";
 import { DONORS } from "@/lib/data/donors";
+import { lookupAcceptor, lookupDonor } from "@/lib/data/lookup";
 import {
   ACCEPTOR_IDS,
   DONOR_IDS,
   type ControlPanelProps,
 } from "@/lib/types";
+
+import { CompoundPicker } from "./CompoundPicker";
 
 type Preset = { label: string; value: number };
 
@@ -21,9 +24,18 @@ const PRESETS: Preset[] = [
   { label: "纯合成", value: 1 },
 ];
 
+const CURATED_DONORS = DONOR_IDS.map((id) => ({
+  id,
+  displayName: DONORS[id].displayName,
+}));
+const CURATED_ACCEPTORS = ACCEPTOR_IDS.map((id) => ({
+  id,
+  displayName: ACCEPTORS[id].displayName,
+}));
+
 /**
  * 论文里的"实验条件"段落 — 不是 dashboard 控件。
- * 纯文字+原生 select+滑条，无任何卡片或图标。
+ * 纯文字+CompoundPicker+滑条，无任何卡片或图标。
  */
 export function ControlPanelV2({
   donorId,
@@ -33,6 +45,22 @@ export function ControlPanelV2({
   onAcceptorChange,
   onFsChange,
 }: ControlPanelProps) {
+  // 取当前选择的中文名 (curated 或 EPA)
+  const donorLabel = (() => {
+    try {
+      return lookupDonor(donorId).displayName;
+    } catch {
+      return String(donorId);
+    }
+  })();
+  const acceptorLabel = (() => {
+    try {
+      return lookupAcceptor(acceptorId).displayName;
+    } catch {
+      return String(acceptorId);
+    }
+  })();
+
   return (
     <section>
       <SectionLabel title="实验条件" />
@@ -40,22 +68,20 @@ export function ControlPanelV2({
       <div className="ink-2 mt-4 space-y-3 text-[15.5px] leading-[1.85]">
         <p>
           以{" "}
-          <InlineSelect
+          <CompoundPicker
+            mode="donor"
             value={donorId}
-            onChange={(v) => onDonorChange(v as typeof donorId)}
-            options={DONOR_IDS.map((id) => ({
-              value: id,
-              label: DONORS[id].displayName,
-            }))}
+            valueLabel={donorLabel}
+            curated={CURATED_DONORS}
+            onSelect={onDonorChange}
           />{" "}
           为电子供体，{" "}
-          <InlineSelect
+          <CompoundPicker
+            mode="acceptor"
             value={acceptorId}
-            onChange={(v) => onAcceptorChange(v as typeof acceptorId)}
-            options={ACCEPTOR_IDS.map((id) => ({
-              value: id,
-              label: ACCEPTORS[id].displayName,
-            }))}
+            valueLabel={acceptorLabel}
+            curated={CURATED_ACCEPTORS}
+            onSelect={onAcceptorChange}
           />{" "}
           为电子受体，
         </p>
@@ -80,7 +106,7 @@ export function ControlPanelV2({
         </p>
       </div>
 
-      {/* 滑块 — 极简，纸面横线感 */}
+      {/* 滑块 */}
       <div className="mt-5 flex items-center gap-4">
         <Slider
           min={0}
@@ -99,7 +125,7 @@ export function ControlPanelV2({
         </div>
       </div>
 
-      {/* 预设：脚注式小字链接，不像按钮 */}
+      {/* 预设 */}
       <div className="ink-4 mt-2.5 flex flex-wrap gap-x-3 gap-y-1 text-[11.5px] italic">
         <span>典型值:</span>
         {PRESETS.map((p, i) => {
@@ -128,41 +154,10 @@ export function ControlPanelV2({
   );
 }
 
-function SectionLabel({title }: { title: string }) {
+function SectionLabel({ title }: { title: string }) {
   return (
     <div className="flex items-baseline gap-3">
-      <h2 className="ink text-[18px] font-semibold tracking-tight">
-        {title}
-      </h2>
+      <h2 className="ink text-[18px] font-semibold tracking-tight">{title}</h2>
     </div>
-  );
-}
-
-function InlineSelect({
-  value,
-  onChange,
-  options,
-}: {
-  value: string;
-  onChange: (v: string) => void;
-  options: { value: string; label: string }[];
-}) {
-  return (
-    <span className="relative inline-block">
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="ink accent-ink-hover cursor-pointer appearance-none border-0 border-b border-[var(--rule)] bg-transparent pb-[1px] pr-4 font-semibold italic outline-none transition hover:border-[var(--accent-ink)] hover:text-[var(--accent-ink)] focus:border-[var(--accent-ink)] focus:text-[var(--accent-ink)]"
-      >
-        {options.map((opt) => (
-          <option key={opt.value} value={opt.value} className="bg-[var(--paper)] not-italic">
-            {opt.label}
-          </option>
-        ))}
-      </select>
-      <span className="ink-4 pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-[9px]">
-        ▼
-      </span>
-    </span>
   );
 }

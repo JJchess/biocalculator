@@ -1,7 +1,6 @@
-import type { AcceptorId, DonorId } from "../types";
+import type { AcceptorKey, DonorKey } from "../types";
 
-import { ACCEPTORS } from "../data/acceptors";
-import { DONORS } from "../data/donors";
+import { lookupAcceptor, lookupDonor } from "../data/lookup";
 
 export type SankeyNode = { id: string; label: string; color: string };
 export type SankeyLink = { source: string; target: string; value: number };
@@ -16,14 +15,14 @@ export type SankeyData = { nodes: SankeyNode[]; links: SankeyLink[] };
  * 数值 = 电子当量 (mol e⁻ per mol donor)。颜色映射 Apple system colors。
  */
 export function buildSankeyData(
-  donorId: DonorId,
-  acceptorId: AcceptorId,
+  donorId: DonorKey,
+  acceptorId: AcceptorKey,
   fs: number,
   electronsPerDonor: number,
 ): SankeyData {
   const fe = 1 - fs;
-  const donor = DONORS[donorId];
-  const acceptor = ACCEPTORS[acceptorId];
+  const donor = lookupDonor(donorId);
+  const acceptor = lookupAcceptor(acceptorId);
 
   const totalE = electronsPerDonor;
   const eEnergy = totalE * fe;

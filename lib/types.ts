@@ -1,6 +1,10 @@
 import type { Fraction } from "fraction.js";
 
-/** All species keys used in coefficients / mass balance (single source for calculator + UI). */
+/** All species keys used in coefficients / mass balance.
+ *
+ * 经典 13 条半反应库的物种 ID 显式列出 (保留自动补全),
+ * 额外允许任意字符串以容纳 EPA 126 条扩展库 (epa_001..epa_129 + chloride/bromide/... 等产物 id).
+ */
 export type SpeciesId =
   | "e_minus"
   | "h_ion"
@@ -24,7 +28,8 @@ export type SpeciesId =
   | "ferric"
   | "ferrous"
   | "manganite"
-  | "manganous";
+  | "manganous"
+  | (string & {});
 
 export const DONOR_IDS = [
   "glucose",
@@ -87,9 +92,14 @@ export type ProductBarDatum = {
   fill: string;
 };
 
+/** Donor 可以是 curated DonorId 或 "epa_NNN" (扩展自 EPA 126 条) */
+export type DonorKey = DonorId | (string & {});
+/** Acceptor 同理 */
+export type AcceptorKey = AcceptorId | (string & {});
+
 export type CalculatorInput = {
-  donorId: DonorId;
-  acceptorId: AcceptorId;
+  donorId: DonorKey;
+  acceptorId: AcceptorKey;
   /** Fraction of electrons for biomass synthesis (0–1). Energy = 1 − fs. */
   fs: number;
 };
@@ -107,8 +117,8 @@ export type CalculatorResult = {
   fs: number;
   kpis: import("./core/kpis").KpiBundle;
   sankey: import("./core/sankey").SankeyData;
-  donorId: DonorId;
-  acceptorId: AcceptorId;
+  donorId: DonorKey;
+  acceptorId: AcceptorKey;
 };
 
 export type DonorSelectorProps = {
@@ -143,11 +153,11 @@ export type ProductBarChartProps = {
 };
 
 export type ControlPanelProps = {
-  donorId: DonorId;
-  acceptorId: AcceptorId;
+  donorId: DonorKey;
+  acceptorId: AcceptorKey;
   fs: number;
-  onDonorChange: (id: DonorId) => void;
-  onAcceptorChange: (id: AcceptorId) => void;
+  onDonorChange: (id: DonorKey) => void;
+  onAcceptorChange: (id: AcceptorKey) => void;
   onFsChange: (value: number) => void;
 };
 
