@@ -1,7 +1,6 @@
 "use client";
 
 import { BlockMath } from "react-katex";
-import { ChevronRight } from "lucide-react";
 
 import {
   Collapsible,
@@ -13,91 +12,76 @@ import { CELL_SYNTHESIS } from "@/lib/data/cellSynthesis";
 import { DONORS } from "@/lib/data/donors";
 import { ACCEPTOR_IDS, DONOR_IDS } from "@/lib/types";
 
-/**
- * 默认收起为页脚一条文字链接，点击才展开完整参考表。
- * 不再占据视觉权重。
- */
 export function HalfReactionReference() {
   return (
-    <Collapsible className="group/ref mt-2">
-      <div className="flex justify-center">
-        <CollapsibleTrigger className="text-tertiary inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[12px] transition hover:text-[var(--apple-blue)]">
-          <span>半反应参考库</span>
-          <ChevronRight className="h-3.5 w-3.5 transition-transform group-data-[panel-open]/ref:rotate-90" />
-        </CollapsibleTrigger>
-      </div>
-      <CollapsibleContent className="mt-3">
-        <div className="surface-card p-5">
-          <div className="grid gap-5 lg:grid-cols-3">
-            <Section title="电子供体" accent="blue">
-              <ul className="space-y-2.5">
-                {DONOR_IDS.map((id) => (
-                  <RefItem
-                    key={id}
-                    name={DONORS[id].displayName}
-                    tex={DONORS[id].referenceKatex}
-                  />
-                ))}
-              </ul>
-            </Section>
-            <Section title="电子受体" accent="orange">
-              <ul className="space-y-2.5">
-                {ACCEPTOR_IDS.map((id) => (
-                  <RefItem
-                    key={id}
-                    name={ACCEPTORS[id].displayName}
-                    tex={ACCEPTORS[id].referenceKatex}
-                  />
-                ))}
-              </ul>
-            </Section>
-            <Section title="细胞合成" accent="green">
-              <RefItem
-                name={CELL_SYNTHESIS.displayName}
-                tex={CELL_SYNTHESIS.referenceKatex}
-              />
-            </Section>
-          </div>
+    <section className="rule-t pt-6">
+      <Collapsible className="group/ref">
+        <div className="flex items-baseline justify-between">
+          <h2 className="ink-3 text-[11px] uppercase tracking-[0.2em]">
+            附录 · 半反应参考
+          </h2>
+          <CollapsibleTrigger className="ink-3 text-[12px] italic underline decoration-[var(--rule)] decoration-1 underline-offset-[3px] transition hover:text-[var(--accent-ink)] hover:decoration-[var(--accent-ink)]">
+            <span className="group-data-[panel-open]/ref:hidden">展开 ▾</span>
+            <span className="hidden group-data-[panel-open]/ref:inline">收起 ▴</span>
+          </CollapsibleTrigger>
         </div>
-      </CollapsibleContent>
-    </Collapsible>
+
+        <CollapsibleContent className="mt-5 space-y-7">
+          <RefBlock title="A. 电子供体（氧化）">
+            {DONOR_IDS.map((id) => (
+              <RefItem
+                key={id}
+                name={DONORS[id].displayName}
+                tex={DONORS[id].referenceKatex}
+              />
+            ))}
+          </RefBlock>
+          <RefBlock title="B. 电子受体（还原）">
+            {ACCEPTOR_IDS.map((id) => (
+              <RefItem
+                key={id}
+                name={ACCEPTORS[id].displayName}
+                tex={ACCEPTORS[id].referenceKatex}
+              />
+            ))}
+          </RefBlock>
+          <RefBlock title="C. 细胞合成">
+            <RefItem
+              name={CELL_SYNTHESIS.displayName}
+              tex={CELL_SYNTHESIS.referenceKatex}
+            />
+          </RefBlock>
+        </CollapsibleContent>
+      </Collapsible>
+    </section>
   );
 }
 
-function Section({
+function RefBlock({
   title,
-  accent,
   children,
 }: {
   title: string;
-  accent: "blue" | "orange" | "green";
   children: React.ReactNode;
 }) {
-  const colorMap: Record<string, string> = {
-    blue: "text-[var(--apple-blue)] dark:text-[var(--apple-teal)]",
-    orange: "text-[#b35900] dark:text-[var(--apple-orange)]",
-    green: "text-[#1c7a3a] dark:text-[var(--apple-green)]",
-  };
   return (
-    <section>
-      <h3
-        className={`mb-2 text-[10.5px] font-semibold uppercase tracking-wider ${colorMap[accent]}`}
-      >
+    <div>
+      <h3 className="ink-2 mb-2 text-[13.5px] font-semibold italic">
         {title}
       </h3>
-      {children}
-    </section>
+      <ul className="divide-y divide-[var(--rule-soft)]">{children}</ul>
+    </div>
   );
 }
 
 function RefItem({ name, tex }: { name: string; tex?: string }) {
   return (
-    <li className="rounded-lg border border-[var(--hairline)] bg-[rgba(0,0,0,0.02)] p-2.5 dark:bg-[rgba(255,255,255,0.03)]">
-      <div className="text-tertiary mb-1 text-[11px]">{name}</div>
+    <li className="grid grid-cols-[110px_1fr] items-center gap-3 py-1.5">
+      <span className="ink-3 truncate text-[12.5px] italic">{name}</span>
       {tex ? (
-        <div className="overflow-x-auto text-[12.5px] [&_.katex-display]:my-1">
+        <span className="overflow-x-auto text-[13px] [&_.katex-display]:my-0">
           <BlockMath math={tex} />
-        </div>
+        </span>
       ) : null}
     </li>
   );

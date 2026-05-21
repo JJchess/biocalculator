@@ -8,7 +8,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowDownUp, ArrowDown, ArrowUp } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import type { MassBalanceRow } from "@/lib/types";
@@ -42,31 +41,20 @@ export function MassBalanceTableV2({ rows }: Props) {
           const r = row.original;
           const isReactant = r.moles < 0;
           return (
-            <div className="flex items-center gap-2">
-              <span
-                className={`inline-block h-1.5 w-1.5 rounded-full ${
-                  isReactant
-                    ? "bg-[var(--apple-orange)]"
-                    : "bg-[var(--apple-green)]"
-                }`}
-              />
-              <span className="font-medium">{r.displayName}</span>
-            </div>
+            <span className="flex items-baseline gap-2">
+              <span className="ink-4 tabular font-mono text-[10px]">
+                {isReactant ? "−" : "+"}
+              </span>
+              <span className="ink">{r.displayName}</span>
+            </span>
           );
         },
       },
       {
         accessorKey: "moles",
-        header: "mol",
+        header: "n",
         cell: ({ row }) => (
-          <span
-            className={`tabular font-mono ${
-              row.original.moles < 0
-                ? "text-[var(--apple-orange)] dark:text-[var(--apple-orange)]"
-                : "text-[var(--apple-green)] dark:text-[var(--apple-green)]"
-            }`}
-          >
-            {row.original.moles >= 0 ? "+" : ""}
+          <span className="ink-2 tabular font-mono italic">
             {numFmt(row.original.moles)}
           </span>
         ),
@@ -74,16 +62,15 @@ export function MassBalanceTableV2({ rows }: Props) {
       },
       {
         accessorKey: "massGrams",
-        header: "质量 g",
+        header: "m",
         cell: ({ row }) => (
           <span
             className={`tabular font-mono ${
-              row.original.massGrams < 0
-                ? "text-[var(--apple-orange)]"
-                : "text-[var(--apple-green)]"
+              row.original.moles < 0
+                ? "ink-2"
+                : "accent-ink font-medium"
             }`}
           >
-            {row.original.massGrams >= 0 ? "+" : ""}
             {numFmt(row.original.massGrams, 3)}
           </span>
         ),
@@ -91,28 +78,12 @@ export function MassBalanceTableV2({ rows }: Props) {
       },
       {
         accessorKey: "pct",
-        header: "占比",
-        cell: ({ row }) => {
-          const pct = row.original.pct;
-          const isReactant = row.original.moles < 0;
-          return (
-            <div className="flex items-center gap-2">
-              <div className="relative h-1.5 w-20 overflow-hidden rounded-full bg-[rgba(0,0,0,0.06)] dark:bg-[rgba(255,255,255,0.10)]">
-                <div
-                  className={`absolute inset-y-0 left-0 rounded-full transition-[width] duration-300 ease-out ${
-                    isReactant
-                      ? "bg-[var(--apple-orange)]"
-                      : "bg-[var(--apple-green)]"
-                  }`}
-                  style={{ width: `${(pct * 100).toFixed(1)}%` }}
-                />
-              </div>
-              <span className="tabular text-quaternary w-10 text-right text-[11px]">
-                {(pct * 100).toFixed(1)}%
-              </span>
-            </div>
-          );
-        },
+        header: "份额",
+        cell: ({ row }) => (
+          <span className="ink-3 tabular font-mono text-[12.5px]">
+            {(row.original.pct * 100).toFixed(1)}%
+          </span>
+        ),
         sortingFn: (a, b) => a.original.pct - b.original.pct,
       },
     ],
@@ -133,60 +104,86 @@ export function MassBalanceTableV2({ rows }: Props) {
   });
 
   return (
-    <div className="surface-card flex flex-col overflow-hidden">
-      <div className="hairline-b px-4 py-2.5">
-        <span className="text-tertiary text-[11px] font-semibold uppercase tracking-wider">
-          质量衡算
-        </span>
-      </div>
-      <div className="max-h-[360px] min-w-0 overflow-auto px-1">
-        <table className="w-full text-[12.5px]">
-          <thead className="sticky top-0 bg-[var(--surface-elevated)] backdrop-blur">
-            {table.getHeaderGroups().map((hg) => (
-              <tr key={hg.id} className="hairline-b">
-                {hg.headers.map((h) => {
-                  const sorted = h.column.getIsSorted();
-                  return (
-                    <th
-                      key={h.id}
-                      onClick={h.column.getToggleSortingHandler()}
-                      className="text-tertiary cursor-pointer select-none px-3 py-2 text-left text-[11px] font-medium uppercase tracking-wide first:pl-4 last:pr-4 hover:text-[var(--text-primary)]"
-                    >
-                      <span className="inline-flex items-center gap-1">
-                        {flexRender(h.column.columnDef.header, h.getContext())}
-                        {sorted === "asc" ? (
-                          <ArrowUp className="h-3 w-3" />
-                        ) : sorted === "desc" ? (
-                          <ArrowDown className="h-3 w-3" />
-                        ) : (
-                          <ArrowDownUp className="text-quaternary h-3 w-3" />
-                        )}
+    <section>
+      <SectionLabel title="质量衡算" />
+
+      <figure className="mt-5">
+        {/* 三线表: top double rule, header rule, bottom rule */}
+        <table className="w-full border-collapse text-[14px]">
+          <thead>
+            <tr>
+              {table.getHeaderGroups()[0]?.headers.map((h, i) => {
+                const sorted = h.column.getIsSorted();
+                const isFirst = i === 0;
+                const isNumeric = i > 0 && i < 3;
+                return (
+                  <th
+                    key={h.id}
+                    onClick={h.column.getToggleSortingHandler()}
+                    style={{
+                      borderTop: "2.5px solid var(--ink)",
+                      borderBottom: "1px solid var(--ink)",
+                    }}
+                    className={`ink-2 cursor-pointer select-none py-2.5 text-[12.5px] font-normal italic transition hover:text-[var(--accent-ink)] ${
+                      isFirst ? "pl-1 text-left" : isNumeric ? "text-right pr-1" : "text-right pr-1"
+                    }`}
+                  >
+                    {flexRender(h.column.columnDef.header, h.getContext())}
+                    {sorted ? (
+                      <span className="ink-4 ml-1 text-[10px]">
+                        {sorted === "asc" ? "↑" : "↓"}
                       </span>
-                    </th>
+                    ) : null}
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row, idx, arr) => (
+              <tr
+                key={row.id}
+                style={
+                  idx === arr.length - 1
+                    ? { borderBottom: "2.5px solid var(--ink)" }
+                    : undefined
+                }
+                className="transition-colors hover:bg-[rgba(139,26,26,0.03)]"
+              >
+                {row.getVisibleCells().map((cell, i) => {
+                  const isFirst = i === 0;
+                  return (
+                    <td
+                      key={cell.id}
+                      className={`py-1.5 ${
+                        isFirst ? "pl-1 text-left" : "text-right pr-1"
+                      }`}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </td>
                   );
                 })}
               </tr>
             ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr
-                key={row.id}
-                className="border-b border-[var(--hairline)] transition-colors hover:bg-[rgba(0,0,0,0.03)] last:border-b-0 dark:hover:bg-[rgba(255,255,255,0.04)]"
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <td
-                    key={cell.id}
-                    className="px-3 py-2 first:pl-4 last:pr-4"
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
-            ))}
           </tbody>
         </table>
-      </div>
+        <figcaption className="ink-3 mt-2.5 text-[12.5px] italic leading-relaxed">
+          <span className="ink-4 not-italic">Tab. 1 ·</span>{" "}
+          n 单位 mol、m 单位 g，均以每 mol 电子供体为基准；
+          <span className="not-italic"> −</span> 为反应物，
+          <span className="not-italic"> +</span> 为产物。
+        </figcaption>
+      </figure>
+    </section>
+  );
+}
+
+function SectionLabel({ title }: { title: string }) {
+  return (
+    <div className="flex items-baseline gap-3">
+      <h2 className="ink text-[18px] font-semibold tracking-tight">
+        {title}
+      </h2>
     </div>
   );
 }

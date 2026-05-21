@@ -1,6 +1,5 @@
 "use client";
 
-import { Atom, Copy } from "lucide-react";
 import { toast } from "sonner";
 
 import type { CalculatorResult } from "@/lib/types";
@@ -20,27 +19,28 @@ export function AppBar({ result }: Props) {
   };
 
   return (
-    <header className="sticky top-3 z-30">
-      <div className="surface-card flex h-12 items-center px-3.5">
-        <div className="flex shrink-0 items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--apple-blue)] to-[var(--apple-purple)] text-white shadow-[var(--shadow-glow-blue)]">
-            <Atom className="h-4 w-4" strokeWidth={2.4} />
-          </div>
-          <span className="text-[14px] font-semibold tracking-tight">BioCalc</span>
-          <span className="text-quaternary hidden text-[11.5px] md:inline">
-            · 生物处理质量衡算
-          </span>
+    <header className="rule-double-b pb-5">
+      <div className="flex items-baseline justify-between gap-4">
+        <div className="ink-3 text-[10.5px] uppercase tracking-[0.22em]">
+          Mass Balance · Rittmann–McCarty Method
         </div>
-
         <button
           type="button"
           onClick={copyLatex}
-          className="text-secondary ml-auto inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-medium transition hover:bg-[var(--secondary)] active:scale-[0.97]"
+          className="ink-3 text-[11px] italic underline decoration-[var(--rule)] decoration-1 underline-offset-[3px] transition hover:text-[var(--accent-ink)] hover:decoration-[var(--accent-ink)]"
         >
-          <Copy className="h-3.5 w-3.5" />
-          <span className="hidden sm:inline">复制 LaTeX</span>
+          cite as LaTeX →
         </button>
       </div>
+      <h1 className="ink mt-4 text-[30px] font-semibold leading-[1.15] tracking-[-0.01em]">
+        复杂污染物生物处理的{" "}
+        <em className="accent-ink font-normal italic">半反应法</em>{" "}
+        合并方程
+      </h1>
+      <p className="ink-3 mt-2.5 text-[14.5px] italic leading-relaxed">
+        基于元素—电荷守恒自动配平
+        <span className="ink-4 not-italic"> · 每 1 mol 电子供体基准</span>
+      </p>
     </header>
   );
 }

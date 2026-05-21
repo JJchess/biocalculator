@@ -1,100 +1,109 @@
 "use client";
 
 import { ResponsiveSankey } from "@nivo/sankey";
-import { GitBranch } from "lucide-react";
 
 import type { CalculatorResult } from "@/lib/types";
 
 type Props = { result: CalculatorResult };
 
+/**
+ * 单色墨水画 + accent-ink 强调电子流。
+ * 论文 figure 风：标题在下方斜体 caption。
+ */
 const NODE_COLOR: Record<string, string> = {
-  donor: "#0a84ff",
-  energy: "#30b0c7",
-  biomass: "#34c759",
-  acceptor: "#ff9500",
-  product: "#af52de",
+  donor: "var(--ink)",
+  energy: "var(--ink-3)",
+  biomass: "var(--accent-ink)",
+  acceptor: "var(--ink-2)",
+  product: "var(--ink-3)",
 };
 
 export function SankeyChart({ result }: Props) {
   const { sankey } = result;
 
-  // Nivo expects: nodes: {id, nodeColor}, links: {source, target, value}
   const data = {
     nodes: sankey.nodes.map((n) => ({
       id: n.id,
       label: n.label,
-      nodeColor: NODE_COLOR[n.id] ?? "#86868b",
+      nodeColor: NODE_COLOR[n.id] ?? "var(--ink-3)",
     })),
     links: sankey.links,
   };
 
   return (
-    <div className="surface-card relative flex h-full min-h-[420px] flex-col overflow-hidden p-4">
-      <div className="mb-1 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[rgba(0,122,255,0.10)] text-[var(--apple-blue)] dark:bg-[rgba(10,132,255,0.16)] dark:text-[var(--apple-teal)]">
-            <GitBranch className="h-4 w-4" />
-          </div>
-          <div>
-            <div className="text-[13px] font-semibold">电子流向</div>
-            <div className="text-quaternary text-[11px]">
-              供体 → 能量 / 合成 → 受体 · 产物（单位 mol e⁻ · per mol 供体）
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="-mx-2 min-h-0 flex-1">
-        <ResponsiveSankey
-          data={data}
-          margin={{ top: 16, right: 110, bottom: 16, left: 110 }}
-          align="justify"
-          colors={(n) => (n as { nodeColor: string }).nodeColor}
-          nodeOpacity={1}
-          nodeHoverOthersOpacity={0.35}
-          nodeThickness={14}
-          nodeSpacing={28}
-          nodeBorderWidth={0}
-          nodeBorderRadius={4}
-          linkOpacity={0.5}
-          linkHoverOpacity={0.85}
-          linkHoverOthersOpacity={0.1}
-          linkContract={2}
-          enableLinkGradient
-          labelPosition="outside"
-          labelOrientation="horizontal"
-          labelPadding={12}
-          label={(node) => (node as unknown as { label: string }).label}
-          labelTextColor={{ from: "color", modifiers: [["darker", 1.4]] }}
-          animate
-          motionConfig="gentle"
-          theme={{
-            text: {
-              fontFamily: "var(--font-sans)",
-              fontSize: 12,
-              fill: "var(--text-secondary)",
-            },
-            labels: {
+    <section>
+      <SectionLabel title="电子流向" />
+
+      <figure className="mt-5">
+        <div className="rule-t rule-b h-[400px] w-full py-3">
+          <ResponsiveSankey
+            data={data}
+            margin={{ top: 14, right: 110, bottom: 14, left: 110 }}
+            align="justify"
+            colors={(n) => (n as { nodeColor: string }).nodeColor}
+            nodeOpacity={1}
+            nodeHoverOthersOpacity={0.3}
+            nodeThickness={10}
+            nodeSpacing={28}
+            nodeBorderWidth={0}
+            nodeBorderRadius={0}
+            linkOpacity={0.32}
+            linkHoverOpacity={0.7}
+            linkHoverOthersOpacity={0.08}
+            linkContract={1}
+            enableLinkGradient
+            labelPosition="outside"
+            labelOrientation="horizontal"
+            labelPadding={10}
+            label={(node) => (node as unknown as { label: string }).label}
+            labelTextColor="var(--ink-2)"
+            animate
+            motionConfig="gentle"
+            theme={{
               text: {
-                fontFamily: "var(--font-sans)",
-                fontSize: 12.5,
-                fontWeight: 600,
+                fontFamily: "var(--font-serif), serif",
+                fontSize: 13,
+                fill: "var(--ink-2)",
               },
-            },
-            tooltip: {
-              container: {
-                background: "var(--surface-elevated)",
-                color: "var(--text-primary)",
-                border: "1px solid var(--hairline)",
-                borderRadius: 12,
-                boxShadow: "var(--shadow-3)",
-                fontFamily: "var(--font-sans)",
-                fontSize: 12,
-                padding: "8px 12px",
+              labels: {
+                text: {
+                  fontFamily: "var(--font-serif), serif",
+                  fontSize: 13.5,
+                  fontWeight: 500,
+                  fontStyle: "italic",
+                },
               },
-            },
-          }}
-        />
-      </div>
+              tooltip: {
+                container: {
+                  background: "var(--paper)",
+                  color: "var(--ink)",
+                  border: "1px solid var(--rule)",
+                  borderRadius: 2,
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                  fontFamily: "var(--font-serif), serif",
+                  fontSize: 12.5,
+                  padding: "6px 10px",
+                },
+              },
+            }}
+          />
+        </div>
+        <figcaption className="ink-3 mt-2.5 text-[12.5px] italic leading-relaxed">
+          <span className="ink-4 not-italic">Fig. 1 ·</span>{" "}
+          单位电子流量（mol e⁻ · mol⁻¹ 底物）在能量代谢与细胞合成两条路径上的分配；
+          支路宽度正比于电子通量。
+        </figcaption>
+      </figure>
+    </section>
+  );
+}
+
+function SectionLabel({ title }: { title: string }) {
+  return (
+    <div className="flex items-baseline gap-3">
+      <h2 className="ink text-[18px] font-semibold tracking-tight">
+        {title}
+      </h2>
     </div>
   );
 }
