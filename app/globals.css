@@ -211,17 +211,8 @@
     text-rendering: optimizeLegibility;
   }
   body {
-    background:
-      radial-gradient(1200px 600px at 20% -10%, rgba(0, 122, 255, 0.07), transparent 60%),
-      radial-gradient(1000px 600px at 100% 10%, rgba(175, 82, 222, 0.06), transparent 60%),
-      var(--app-bg);
+    background: var(--app-bg);
     min-height: 100vh;
-  }
-  .dark body {
-    background:
-      radial-gradient(1200px 600px at 20% -10%, rgba(10, 132, 255, 0.10), transparent 60%),
-      radial-gradient(1000px 600px at 100% 10%, rgba(191, 90, 242, 0.06), transparent 60%),
-      var(--app-bg);
   }
   /* Mono numeric defaults — tabular for tables / KPIs */
   .tabular {
