@@ -37,7 +37,8 @@ const HELPER_SPECIES: Record<string, { formula: string; tex: string; displayName
   chromate: { formula: "CrO4^2-", tex: String.raw`\mathrm{CrO_4^{2-}}`, displayName: "CrO₄²⁻" },
   chromium_iii: { formula: "Cr^3+", tex: String.raw`\mathrm{Cr^{3+}}`, displayName: "Cr³⁺" },
   arsenate: { formula: "H2AsO4^-", tex: String.raw`\mathrm{H_2AsO_4^-}`, displayName: "H₂AsO₄⁻" },
-  arsenite: { formula: "HAsO2", tex: String.raw`\mathrm{HAsO_2}`, displayName: "HAsO₂" },
+  // H₃AsO₃ = arsenious acid; pH 7 主要形式。R&M (2001) Table A.1 同形
+  arsenite: { formula: "H3AsO3", tex: String.raw`\mathrm{H_3AsO_3}`, displayName: "H₃AsO₃" },
   mercury_ii: { formula: "Hg^2+", tex: String.raw`\mathrm{Hg^{2+}}`, displayName: "Hg²⁺" },
   mercury_0: { formula: "Hg", tex: String.raw`\mathrm{Hg^0}`, displayName: "Hg⁰" },
   selenate: { formula: "SeO4^2-", tex: String.raw`\mathrm{SeO_4^{2-}}`, displayName: "SeO₄²⁻" },

@@ -169,9 +169,7 @@ export function MassBalanceTableV2({ rows }: Props) {
         </table>
         <figcaption className="ink-3 mt-2.5 text-[12.5px] italic leading-relaxed">
           <span className="ink-4 not-italic">Tab. 1 ·</span>{" "}
-          n 单位 mol、m 单位 g，均以每 mol 电子供体为基准；
-          <span className="not-italic"> −</span> 为反应物，
-          <span className="not-italic"> +</span> 为产物。
+          n 单位 mol、m 单位 g，均以每 mol 电子供体为基准。
         </figcaption>
       </figure>
     </section>

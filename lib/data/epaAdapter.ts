@@ -24,6 +24,39 @@ function epaIdFromKey(id: string): string {
   return id.startsWith(EPA_PREFIX) ? id.slice(EPA_PREFIX.length) : id;
 }
 
+/** 辅助物种 — 不作为 primarySpecies 候选 */
+const AUX_SPECIES = new Set(["e_minus", "h_ion", "h2o", "co2", "biomass", "nh4"]);
+
+/**
+ * 推断 primarySpecies:
+ *  - donor: 键形如 "epa_NNN"（系数为负，即被消耗的底物）
+ *  - acceptor_metal: 辅助物种以外系数最负的键（即被还原的氧化态物种）
+ */
+function inferPrimarySpecies(
+  p: EpaPollutant,
+  coefficients: HalfReactionCoefficients,
+): SpeciesId {
+  const epaKey = `epa_${p.epa_id}` as SpeciesId;
+  if (epaKey in coefficients) return epaKey;
+
+  // acceptor_metal: 找消耗量最大（系数最负）的非辅助物种
+  let best: SpeciesId | undefined;
+  let bestVal = Infinity;
+  for (const [k, v] of Object.entries(coefficients)) {
+    if (AUX_SPECIES.has(k)) continue;
+    const [n, d] = (v as string).includes("/")
+      ? (v as string).split("/")
+      : [v as string, "1"];
+    const num = Number(n) / Number(d);
+    if (num < bestVal) {
+      bestVal = num;
+      best = k as SpeciesId;
+    }
+  }
+  if (best !== undefined) return best;
+  return epaKey; // fallback
+}
+
 function buildEntry(p: EpaPollutant): HalfReactionEntry {
   if (!p.balance) {
     throw new Error(`EPA #${p.epa_id} (${p.name_en}) 没有配平结果, 无法转 HalfReactionEntry`);
@@ -32,10 +65,11 @@ function buildEntry(p: EpaPollutant): HalfReactionEntry {
   for (const [k, v] of Object.entries(p.balance.coefficients)) {
     coeffObj[k as SpeciesId] = v;
   }
+  const primarySpecies = inferPrimarySpecies(p, coeffObj);
   return {
     id: `epa_${p.epa_id}`,
     displayName: p.name_cn,
-    primarySpecies: `epa_${p.epa_id}` as SpeciesId,
+    primarySpecies,
     coefficients: coeffObj,
     referenceKatex: p.balance.equationKatex,
   };

@@ -1,6 +1,7 @@
 import type { AcceptorKey, DonorKey } from "../types";
 
 import { lookupAcceptor, lookupDonor } from "../data/lookup";
+import { speciesDisplayName } from "../data/molecularWeights";
 
 export type SankeyNode = { id: string; label: string; color: string };
 export type SankeyLink = { source: string; target: string; value: number };
@@ -46,7 +47,7 @@ export function buildSankeyData(
     { id: "energy", label: "能量代谢 (fe)", color: "var(--chart-3)" },
     { id: "biomass", label: "细胞 C₅H₇O₂N", color: "var(--chart-2)" },
     { id: "acceptor", label: acceptor.displayName, color: "var(--chart-4)" },
-    { id: "product", label: reducedProduct, color: "var(--chart-5)" },
+    { id: "product", label: speciesDisplayName(reducedProduct as never), color: "var(--chart-5)" },
   ];
 
   const eps = 1e-6;

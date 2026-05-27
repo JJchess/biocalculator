@@ -21,9 +21,6 @@ export function AppBar({ result }: Props) {
   return (
     <header className="rule-double-b pb-5">
       <div className="flex items-baseline justify-between gap-4">
-        <div className="ink-3 text-[10.5px] uppercase tracking-[0.22em]">
-          Mass Balance · Rittmann–McCarty Method
-        </div>
         <button
           type="button"
           onClick={copyLatex}

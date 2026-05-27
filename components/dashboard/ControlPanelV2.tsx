@@ -107,7 +107,7 @@ export function ControlPanelV2({
       </div>
 
       {/* 滑块 */}
-      <div className="mt-5 flex items-center gap-4">
+      <div className="mt-5">
         <Slider
           min={0}
           max={1}
@@ -118,11 +118,7 @@ export function ControlPanelV2({
             if (next === undefined) return;
             onFsChange(next);
           }}
-          className="flex-1"
         />
-        <div className="ink-4 tabular font-mono text-[11px]">
-          0 ── {fs.toFixed(2)} ── 1
-        </div>
       </div>
 
       {/* 预设 */}

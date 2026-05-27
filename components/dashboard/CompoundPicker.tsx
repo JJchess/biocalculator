@@ -200,11 +200,6 @@ export function CompoundPicker({
                 ) : null}
               </div>
 
-              {/* 页脚 */}
-              <div className="rule-t ink-4 px-5 py-2 text-[10.5px] italic">
-                数据源 · 40 CFR Part 423 Appx A (126 种) + PubChem 分子式溯源 ·
-                半反应系数由 Gauss 消元自动配平 (残差 &lt; 10⁻¹⁵)
-              </div>
             </div>
           </div>,
           document.body,

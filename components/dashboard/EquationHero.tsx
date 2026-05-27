@@ -17,8 +17,6 @@ export function EquationHero({ result }: Props) {
 
   return (
     <section>
-      <SectionLabel title="合并方程" />
-
       <motion.figure
         key={result.equationKatex}
         initial={{ opacity: 0.4, y: 6 }}
@@ -89,12 +87,3 @@ function Footnote({
   );
 }
 
-function SectionLabel({ title }: { title: string }) {
-  return (
-    <div className="flex items-baseline gap-3">
-      <h2 className="ink text-[18px] font-semibold tracking-tight">
-        {title}
-      </h2>
-    </div>
-  );
-}

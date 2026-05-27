@@ -2,7 +2,7 @@
   "meta": {
     "source": "U.S. EPA 40 CFR Part 423, Appendix A — Priority Pollutants",
     "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423",
-    "generatedAt": "2026-05-21T08:27:46.088Z",
+    "generatedAt": "2026-05-21T15:45:59.383Z",
     "generator": "scripts/build-epa-pollutants.ts",
     "total": 126,
     "donors_balanced": 111,
@@ -4605,19 +4605,19 @@
       "products": [
         {
           "id": "arsenite",
-          "formula": "HAsO2"
+          "formula": "H3AsO3"
         }
       ],
       "balance": {
         "coefficients": {
           "arsenate": "-1/2",
           "arsenite": "1/2",
-          "h2o": "1",
+          "h2o": "1/2",
           "h_ion": "-3/2",
           "e_minus": "-1"
         },
         "molecularWeight": 140.934,
-        "equationKatex": "\\frac{1}{2}\\,H_{2}AsO_{4}^{-} + \\frac{3}{2}\\,H^{+} + e^{-} \\rightarrow \\frac{1}{2}\\,HAsO_{2} + H_{2}O",
+        "equationKatex": "\\frac{1}{2}\\,H_{2}AsO_{4}^{-} + \\frac{3}{2}\\,H^{+} + e^{-} \\rightarrow \\frac{1}{2}\\,H_{3}AsO_{3} + \\frac{1}{2}\\,H_{2}O",
         "balance_residuals": {
           "H": "0",
           "As": "0",

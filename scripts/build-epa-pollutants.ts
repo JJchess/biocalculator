@@ -108,12 +108,13 @@ const METAL_HALF_REACTIONS: Record<
     productId: "chromium_iii",
     productFormula: "Cr^3+",
   },
-  // As(V) → As(III):  H₂AsO₄⁻ + 3 H⁺ + 2 e⁻ → HAsO₂ + 2 H₂O
+  // As(V) → As(III):  H₂AsO₄⁻ + 3 H⁺ + 2 e⁻ → H₃AsO₃ + H₂O
+  // R&M (2001) Table A.1: As(III) 在 pH 7 以 H₃AsO₃ (arsenious acid) 为主要水相形式
   "115": {
     substrateId: "arsenate",
     substrateFormula: "H2AsO4^-",
     productId: "arsenite",
-    productFormula: "HAsO2",
+    productFormula: "H3AsO3",
   },
   // Hg(II) → Hg(0):  Hg²⁺ + 2 e⁻ → Hg
   "123": {
