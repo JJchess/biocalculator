@@ -57,6 +57,7 @@ export function SankeyChart({ result }: Props) {
             labelPadding={10}
             label={(node) => (node as unknown as { label: string }).label}
             labelTextColor="var(--ink-2)"
+            valueFormat=".4f"
             animate
             motionConfig="gentle"
             theme={{

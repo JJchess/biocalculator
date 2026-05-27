@@ -24,7 +24,7 @@ export function EquationHero({ result }: Props) {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="mt-5 flex items-center gap-4"
       >
-        <div className="overflow-x-auto flex-1 text-[18px] sm:text-[20px] md:text-[22px]">
+        <div className="overflow-x-auto flex-1 text-[18px] sm:text-[20px] md:text-[22px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <BlockMath math={result.equationKatex} />
         </div>
         <div className="ink-4 tabular font-mono text-[12px]">(1)</div>
