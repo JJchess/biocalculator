@@ -41,7 +41,7 @@ npm install && npm run dev
 
 ## 简介
 
-教材中的半反应法通常只覆盖葡萄糖、乙酸等 13 种经典底物。本工具将化合物库扩展至 **EPA 40 CFR Part 423 附录 A** 所列 126 种优先污染物（苯系物、多环芳烃、含氯农药、重金属等），分子式经 PubChem 国家级数据库逐条复核，半反应系数由元素–电荷守恒矩阵与 **Gauss-Jordan 消元**（`fraction.js` 精确有理数）自动求解，全部残差严格为 0。
+本工具将化合物库扩展至 **EPA 40 CFR Part 423 附录 A** 所列 126 种优先污染物（苯系物、多环芳烃、含氯农药、重金属等），分子式经 PubChem 国家级数据库逐条复核，半反应系数由元素–电荷守恒矩阵与 **Gauss-Jordan 消元**（`fraction.js` 精确有理数）自动求解，全部残差严格为 0。
 
 用户选定供体、受体与细胞合成分数 *f*ₛ 后，系统实时输出：
 - **合并化学计量方程**（KaTeX 渲染）
@@ -212,7 +212,7 @@ frontend/
 │   │   ├── massBalance.ts            # 质量衡算行生成
 │   │   └── sankey.ts                 # Sankey 节点与流量构造
 │   └── data/
-│       ├── donors.ts                 # 7 种经典电子供体（教材精选）
+│       ├── donors.ts                 # 7 种经典电子供体
 │       ├── acceptors.ts              # 6 种经典电子受体
 │       ├── epaPollutants.ts          # EPA 数据访问层
 │       ├── epaAdapter.ts             # EpaPollutant → HalfReactionEntry
