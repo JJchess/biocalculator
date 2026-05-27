@@ -231,21 +231,6 @@ frontend/
 
 ---
 
-## 技术栈
-
-| 用途 | 库 |
-|------|-----|
-| 框架 | Next.js 16 (App Router) + React 19 |
-| 语言 | TypeScript 5 |
-| 样式 | Tailwind CSS v4 |
-| 数学渲染 | KaTeX（`react-katex`） |
-| 图表 | @nivo/sankey |
-| 精确有理数 | fraction.js |
-| 数据表格 | @tanstack/react-table |
-| 动画 | framer-motion · @number-flow/react |
-
----
-
 ## 参考文献
 
 1. Rittmann, B. E., & McCarty, P. L. (2001). *Environmental Biotechnology: Principles and Applications*. McGraw-Hill.
