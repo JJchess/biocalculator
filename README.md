@@ -15,7 +15,7 @@
 ### 快速启动
 
 ```bash
-git clone <仓库地址> && cd biocalculator/frontend
+git clone https://github.com/JJchess/biocalculator.git && cd biocalculator && git checkout main
 npm install && npm run dev
 ```
 
@@ -83,8 +83,9 @@ npm --version    # 验证 npm
 
 ```bash
 # 1. 克隆
-git clone <仓库地址>
-cd biocalculator/frontend
+git clone https://github.com/JJchess/biocalculator.git
+cd biocalculator
+git checkout main
 
 # 2. 安装依赖（首次约 1–2 分钟）
 npm install
